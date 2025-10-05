@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "myArgument";
+    dynamic tg = ViewBag.tg;
+}
+
+<h2 style="font-size: 30px">TÍNH TỔNG HAI SỐ NGUYÊN NHẬN GIÁ TRỊ TỪ ĐỐI TƯỢNG ARGUMENT</h2>
+<div style=" font-size:24px; font-weight:bold ">
+    <div style="display:flex; gap:20px;">
+        <p>Tên tác giả: @tg?.HoTen</p>
+        <p>MSSV: @tg?.MSSV</p>
+        <p>Điện thoại: @tg?.DienThoai</p>
+    </div>
+
+    <form method="post" style="width: 50%">
+        <label for="a">Nhập số thứ nhất:</label>
+        <input type="number" name="a" />
+        <br />
+        <label for="b" style="margin-top: 20px">Nhập số thứ hai: </label>
+        <input type="number" name="b" />
+        <br />
+        <button type="submit">Tính tổng</button>
+    </form>
+    @if (ViewBag.Tong != null)
+    {
+        <p>Tổng hai số vừa nhập là @ViewBag.Tong</p>
+    }
+    
+</div>
+

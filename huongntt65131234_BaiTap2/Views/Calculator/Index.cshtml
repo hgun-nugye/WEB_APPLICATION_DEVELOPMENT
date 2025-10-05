@@ -1,0 +1,16 @@
+﻿@model huongntt65131234_BaiTap2.Models.Calculatorcs
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+{
+    <div>a= @Html.EditorFor(model => model.a) </div>
+    <div>b= @Html.EditorFor(model => model.b) </div>
+    <div>
+        Cộng @Html.RadioButtonFor(model => model.pt, "+", new { @checked = "checked" }) &nbsp; Trừ @Html.RadioButtonFor(model => model.pt, "-") &nbsp;
+        Nhân @Html.RadioButtonFor(model => model.pt, "*") &nbsp;
+        Chia @Html.RadioButtonFor(model => model.pt, "/") &nbsp;
+    </div>
+    <div><input type="submit" value="Tính toán" /></div>
+    <div>Kết quả: <input type="text" name="kq" value=@ViewBag.KQ /></div>
+}

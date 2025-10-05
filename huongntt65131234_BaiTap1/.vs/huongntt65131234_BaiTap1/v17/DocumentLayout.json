@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2B83D627-E9A2-4DBA-A38E-0C8D5C617B63}|huongntt65131234_BaiTap1.csproj|d:\\study\\ph\u00E1t tri\u1EC3n \u1EE9ng d\u1EE5ng web\\thuc_hanh\\huongntt65131234_baitap1\\controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B83D627-E9A2-4DBA-A38E-0C8D5C617B63}|huongntt65131234_BaiTap1.csproj|solutionrelative:controllers\\calculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B83D627-E9A2-4DBA-A38E-0C8D5C617B63}|huongntt65131234_BaiTap1.csproj|d:\\study\\ph\u00E1t tri\u1EC3n \u1EE9ng d\u1EE5ng web\\thuc_hanh\\huongntt65131234_baitap1\\views\\calculator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2B83D627-E9A2-4DBA-A38E-0C8D5C617B63}|huongntt65131234_BaiTap1.csproj|solutionrelative:views\\calculator\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B83D627-E9A2-4DBA-A38E-0C8D5C617B63}|huongntt65131234_BaiTap1.csproj|d:\\study\\ph\u00E1t tri\u1EC3n \u1EE9ng d\u1EE5ng web\\thuc_hanh\\huongntt65131234_baitap1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B83D627-E9A2-4DBA-A38E-0C8D5C617B63}|huongntt65131234_BaiTap1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T04:00:27.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\Views\\Calculator\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Calculator\\Index.cshtml",
+              "ToolTip": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\Views\\Calculator\\Index.cshtml",
+              "RelativeToolTip": "Views\\Calculator\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-23T03:52:21.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculatorController.cs",
+              "DocumentMoniker": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\Controllers\\CalculatorController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CalculatorController.cs",
+              "ToolTip": "D:\\STUDY\\PH\u00C1T TRI\u1EC2N \u1EE8NG D\u1EE4NG WEB\\THUC_HANH\\huongntt65131234_BaiTap1\\Controllers\\CalculatorController.cs",
+              "RelativeToolTip": "Controllers\\CalculatorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T03:51:51.577Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
