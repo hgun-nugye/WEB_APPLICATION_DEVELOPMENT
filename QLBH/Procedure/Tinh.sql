@@ -1,0 +1,44 @@
+-- INSERT
+CREATE OR ALTER PROC sp_Tinh_Insert
+(@TenTinh NVARCHAR(90))
+AS
+BEGIN
+    DECLARE @MaTinh TINYINT = (SELECT ISNULL(MAX(MaTinh), 0) + 1 FROM Tinh);
+    INSERT INTO Tinh VALUES(@MaTinh, @TenTinh);
+END
+GO
+
+-- UPDATE
+CREATE OR ALTER PROC sp_Tinh_Update
+(@MaTinh TINYINT, @TenTinh NVARCHAR(90))
+AS
+BEGIN
+    UPDATE Tinh SET TenTinh = @TenTinh WHERE MaTinh = @MaTinh;
+END
+GO
+
+-- GET ALL
+CREATE OR ALTER PROC sp_Tinh_GetAll
+AS
+BEGIN
+    SELECT * FROM Tinh;
+END
+GO
+
+-- GET BY ID
+CREATE OR ALTER PROC sp_Tinh_GetByID
+(@MaTinh TINYINT)
+AS
+BEGIN
+    SELECT * FROM Tinh WHERE MaTinh = @MaTinh;
+END
+GO
+
+-- DELETE
+CREATE OR ALTER PROC sp_Tinh_Delete
+(@MaTinh TINYINT)
+AS
+BEGIN
+    DELETE FROM Tinh WHERE MaTinh = @MaTinh;
+END
+GO

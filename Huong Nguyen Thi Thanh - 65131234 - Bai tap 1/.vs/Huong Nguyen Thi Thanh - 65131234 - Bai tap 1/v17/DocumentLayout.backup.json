@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|d:\\study\\web_application _development\\thuc_hanh\\huong nguyen thi thanh - 65131234 - bai tap 1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|d:\\study\\web_application _development\\thuc_hanh\\huong nguyen thi thanh - 65131234 - bai tap 1\\views\\thamsoaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:views\\thamsoaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|d:\\study\\web_application _development\\thuc_hanh\\huong nguyen thi thanh - 65131234 - bai tap 1\\views\\thamsoaction\\mymodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:views\\thamsoaction\\mymodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|d:\\study\\web_application _development\\thuc_hanh\\huong nguyen thi thanh - 65131234 - bai tap 1\\controllers\\thamsoactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:controllers\\thamsoactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,10 +31,6 @@
       "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|d:\\study\\web_application _development\\thuc_hanh\\huong nguyen thi thanh - 65131234 - bai tap 1\\views\\thamsoaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:views\\thamsoaction\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|d:\\study\\web_application _development\\thuc_hanh\\huong nguyen thi thanh - 65131234 - bai tap 1\\views\\thamsoaction\\myrequest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B26EAFA4-5BC5-43A0-91E6-67A9C2428B96}|Huong Nguyen Thi Thanh - 65131234 - Bai tap 1.csproj|solutionrelative:views\\thamsoaction\\myrequest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
@@ -34,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +54,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-20T07:58:21.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "myModel.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\ThamSoAction\\myModel.cshtml",
+              "RelativeDocumentMoniker": "Views\\ThamSoAction\\myModel.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\ThamSoAction\\myModel.cshtml",
+              "RelativeToolTip": "Views\\ThamSoAction\\myModel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-03T13:30:47.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "myFormCollection.cshtml",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\ThamSoAction\\myFormCollection.cshtml",
               "RelativeDocumentMoniker": "Views\\ThamSoAction\\myFormCollection.cshtml",
@@ -54,12 +87,11 @@
               "RelativeToolTip": "Views\\ThamSoAction\\myFormCollection.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-03T13:29:48.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T13:29:48.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -67,12 +99,11 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-03T13:27:39.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T13:27:39.279Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\ThamSoAction\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\ThamSoAction\\Index.cshtml",
@@ -85,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "myArgument.cshtml",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\ThamSoAction\\myArgument.cshtml",
               "RelativeDocumentMoniker": "Views\\ThamSoAction\\myArgument.cshtml",
@@ -93,12 +124,11 @@
               "RelativeToolTip": "Views\\ThamSoAction\\myArgument.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-03T13:07:14.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-03T13:07:14.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "myRequest.cshtml",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Views\\ThamSoAction\\myRequest.cshtml",
               "RelativeDocumentMoniker": "Views\\ThamSoAction\\myRequest.cshtml",
@@ -110,16 +140,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ThamSoActionController.cs",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Controllers\\ThamSoActionController.cs",
               "RelativeDocumentMoniker": "Controllers\\ThamSoActionController.cs",
               "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\Huong Nguyen Thi Thanh - 65131234 - Bai tap 1\\Controllers\\ThamSoActionController.cs",
               "RelativeToolTip": "Controllers\\ThamSoActionController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAswF0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAswF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T08:44:05.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-02T08:44:05.168Z"
             }
           ]
         }

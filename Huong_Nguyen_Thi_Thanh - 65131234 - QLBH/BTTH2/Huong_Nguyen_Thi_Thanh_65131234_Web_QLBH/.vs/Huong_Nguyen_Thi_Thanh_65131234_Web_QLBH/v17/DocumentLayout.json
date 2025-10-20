@@ -1,0 +1,78 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\btth2\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\btth2\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\admin\\nhacc_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\admin\\nhacc_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\btth2\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\admin\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NhaCC_admin.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Admin\\NhaCC_admin.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\NhaCC_admin.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Admin\\NhaCC_admin.cshtml",
+              "RelativeToolTip": "Views\\Admin\\NhaCC_admin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T11:54:20.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-13T11:40:28.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Admin\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Create.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\BTTH2\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Admin\\Create.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-08T14:21:57.312Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
