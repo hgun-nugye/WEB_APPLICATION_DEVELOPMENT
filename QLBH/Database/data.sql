@@ -27,16 +27,34 @@ EXEC sp_LoaiSP_Insert N'Son môi', 'NSP02';
 EXEC sp_LoaiSP_Insert N'Dầu gội', 'NSP03';
 GO
 
--- 5. Nhà cung cấp
-EXEC sp_NhaCC_Insert N'L''Oréal Việt Nam', '0909123456', 'contact@loreal.vn', N'10 Lý Thường Kiệt, Q.1', 1;
-EXEC sp_NhaCC_Insert N'Unilever Việt Nam', '0909988776', 'support@unilever.vn', N'25 Pasteur, Q.1', 2;
-EXEC sp_NhaCC_Insert N'Senka Japan', '0911222333', 'info@senka.jp', N'88 Trần Hưng Đạo, Q.Hoàn Kiếm', 3;
+-- 5. Nhà cung cấp 
+EXEC sp_NhaCC_Insert N'L''Oréal Việt Nam', '0909123456', 'contact@loreal.vn', N'Quận 1, TP. Hồ Chí Minh';
+EXEC sp_NhaCC_Insert N'Unilever Việt Nam', '0909988776', 'support@unilever.vn',N'Quận 7, TP. Hồ Chí Minh';
+EXEC sp_NhaCC_Insert N'Senka Japan', '0911222333', 'info@senka.jp',N'Tokyo, Nhật Bản';
 GO
 
 -- 6. Gian hàng
-EXEC sp_GianHang_Insert N'L''Oréal Official Store', N'Gian hàng chính hãng L''Oréal tại Việt Nam', 'NCC01';
-EXEC sp_GianHang_Insert N'Unilever Beauty Store', N'Sản phẩm chăm sóc cá nhân Unilever', 'NCC02';
-EXEC sp_GianHang_Insert N'Senka Official', N'Mỹ phẩm Nhật Bản Senka', 'NCC03';
+EXEC sp_GianHang_Insert 
+    N'L''Oréal Official Store', 
+    N'Gian hàng chính hãng L''Oréal tại Việt Nam', 
+    '0901234567', 
+    'loreal@store.vn', 
+    N'123 Đường Nguyễn Trãi, Quận 5, TP. Hồ Chí Minh';
+
+EXEC sp_GianHang_Insert 
+    N'Unilever Official Store', 
+    N'Gian hàng chính hãng Unilever', 
+    '0909988776', 
+    'unilever@store.vn', 
+    N'45 Đường Cộng Hòa, Quận Tân Bình, TP. Hồ Chí Minh';
+
+EXEC sp_GianHang_Insert 
+    N'Senka Japan Store', 
+    N'Sản phẩm chăm sóc da từ Nhật Bản', 
+    '0911222333', 
+    'senka@store.jp', 
+    N'Tokyo, Nhật Bản';
+
 GO
 
 -- 7. Sản phẩm
