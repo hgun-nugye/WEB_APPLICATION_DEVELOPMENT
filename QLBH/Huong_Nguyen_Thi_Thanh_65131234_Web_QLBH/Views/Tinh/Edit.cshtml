@@ -1,0 +1,26 @@
+﻿@model Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.Tinh
+@{
+    ViewBag.Title = "Sửa Tỉnh";
+}
+
+<h2 class="text-warning mb-3">
+    <i class="fa-solid fa-pen-to-square"></i> Sửa Thông Tin Tỉnh
+</h2>
+
+<form asp-action="Edit" method="post" class="border p-4 rounded shadow-sm bg-light">
+    <div class="form-group mb-3">
+        <label><i class="fa-solid fa-hashtag"></i> Mã Tỉnh</label>
+        <input asp-for="MaTinh" class="form-control" readonly />
+    </div>
+    <div class="form-group mb-3">
+        <label><i class="fa-solid fa-id-badge"></i> Tên Tỉnh</label>
+        <input asp-for="TenTinh" class="form-control" />
+    </div>
+   
+    <button type="submit" class="btn btn-warning text-white">
+        <i class="fa-solid fa-save"></i> Cập nhật
+    </button>
+    <a asp-action="Tinh_Admin" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i> Quay lại
+    </a>
+</form>

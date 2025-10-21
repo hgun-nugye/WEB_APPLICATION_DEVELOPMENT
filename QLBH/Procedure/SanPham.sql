@@ -1,19 +1,19 @@
 CREATE OR ALTER PROC sp_SanPham_Insert
-(@TenSP NVARCHAR(50), @DonGia MONEY, @MoTaSP TEXT, @AnhMH NVARCHAR(50), @MaLoai VARCHAR(10), @MaGH VARCHAR(10) = NULL)
+(@TenSP NVARCHAR(50), @DonGia MONEY, @MoTaSP TEXT, @AnhMH NVARCHAR(50), @MaLoai VARCHAR(10))
 AS
 BEGIN
     DECLARE @Count INT = (SELECT COUNT(*) + 1 FROM SanPham);
-    DECLARE @MaSP VARCHAR(10) = 'SP' + RIGHT('00' + CAST(@Count AS VARCHAR(2)), 2);
-    INSERT INTO SanPham VALUES(@MaSP, @TenSP, @DonGia, @MoTaSP, @AnhMH, @MaLoai, @MaGH);
+    DECLARE @MaSP VARCHAR(10) = 'SP' + RIGHT('00000000' + CAST(@Count AS VARCHAR(2)), 8);
+    INSERT INTO SanPham VALUES(@MaSP, @TenSP, @DonGia, @MoTaSP, @AnhMH, @MaLoai);
 END
 GO
 
 CREATE OR ALTER PROC sp_SanPham_Update
-(@MaSP VARCHAR(10), @TenSP NVARCHAR(50), @DonGia MONEY, @MoTaSP TEXT, @AnhMH NVARCHAR(50), @MaLoai VARCHAR(10), @MaGH VARCHAR(10))
+(@MaSP VARCHAR(10), @TenSP NVARCHAR(50), @DonGia MONEY, @MoTaSP TEXT, @AnhMH NVARCHAR(50), @MaLoai VARCHAR(10))
 AS
 BEGIN
     UPDATE SanPham
-    SET TenSP=@TenSP, DonGia=@DonGia, MoTaSP=@MoTaSP, AnhMH=@AnhMH, MaLoai=@MaLoai, MaGH=@MaGH
+    SET TenSP=@TenSP, DonGia=@DonGia, MoTaSP=@MoTaSP, AnhMH=@AnhMH, MaLoai=@MaLoai
     WHERE MaSP=@MaSP;
 END
 GO

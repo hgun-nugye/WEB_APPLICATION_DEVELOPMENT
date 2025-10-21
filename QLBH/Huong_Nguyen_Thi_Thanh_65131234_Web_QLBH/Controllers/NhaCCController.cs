@@ -1,6 +1,7 @@
 ﻿using Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models;
 using Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 {
@@ -13,6 +14,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 			_context = context;
 		}
 
+		// Trang chính hiển thị thông tin cá nhân
 		public IActionResult Index()
 		{
 			ViewBag.tg = new
@@ -25,19 +27,24 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 		}
 
 		// READ - Danh sách Nhà cung cấp
-		public IActionResult NhaCC_Admin()
+		public async Task<IActionResult> NhaCC_Admin()
 		{
-			Index();
-			var list = _context.NhaCCs.ToList();
-			return View(list);
+			var dsNhaCC = await _context.NhaCC.FromSqlRaw("EXEC sp_NhaCC_GetAll")
+				.ToListAsync();
+
+			return View(dsNhaCC);
 		}
 
 		// DETAILS - Xem chi tiết
-		public IActionResult Details(string id)
+		public async Task<IActionResult> Details(string id)
 		{
-			var ncc = _context.NhaCCs.FirstOrDefault(x => x.MaNCC == id);
+			var ncc = (await _context.NhaCC.FromSqlInterpolated($"EXEC sp_NhaCC_GetByID @MaNCC = {id}")
+				.ToListAsync())
+				.FirstOrDefault();
+
 			if (ncc == null)
 				return NotFound();
+
 			return View(ncc);
 		}
 
@@ -51,62 +58,106 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 		// CREATE - POST
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public IActionResult Create(NhaCC model)
+		public async Task<IActionResult> Create(NhaCC model)
 		{
-			if (ModelState.IsValid)
+			try
 			{
-				_context.NhaCCs.Add(model);
-				_context.SaveChanges();
-				return RedirectToAction("NhaCC_Admin");
+				await _context.Database.ExecuteSqlInterpolatedAsync($@"
+					EXEC sp_NhaCC_Insert 
+						@TenNCC = {model.TenNCC}, 
+						@DienThoaiNCC = {model.DienThoaiNCC}, 
+						@EmailNCC = {model.EmailNCC}, 
+						@DiaChiNCC = {model.DiaChiNCC}
+				");
+
+
+				TempData["SuccessMessage"] = "Thêm nhà cung cấp thành công!";
+				return RedirectToAction(nameof(NhaCC_Admin));
 			}
-			return View(model);
+			catch (Exception ex)
+			{
+				TempData["ErrorMessage"] = "Lỗi: " + ex.Message;
+				return View(model);
+			}
 		}
 
 		// EDIT - GET
 		[HttpGet]
-		public IActionResult Edit(string id)
+		public async Task<IActionResult> Edit(string id)
 		{
-			var ncc = _context.NhaCCs.FirstOrDefault(x => x.MaNCC == id);
+			if (string.IsNullOrEmpty(id))
+				return BadRequest();
+
+			var ncc = (await _context.NhaCC
+				.FromSqlInterpolated($"EXEC sp_NhaCC_GetByID @MaNCC = {id}")
+				.ToListAsync())
+				.FirstOrDefault();
+
 			if (ncc == null)
 				return NotFound();
+
 			return View(ncc);
 		}
 
 		// EDIT - POST
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public IActionResult Edit(NhaCC model)
+		public async Task<IActionResult> Edit(NhaCC model)
 		{
 			if (ModelState.IsValid)
 			{
-				_context.NhaCCs.Update(model);
-				_context.SaveChanges();
-				TempData["UpdateMessage"] = "Cập nhật thông tin thành công!";
-				return RedirectToAction("NhaCC_Admin");
+				// Nếu Update không trả về dữ liệu, ta dùng ExecuteSqlInterpolatedAsync
+				await _context.Database.ExecuteSqlInterpolatedAsync($@"
+					EXEC sp_NhaCC_Update 
+						@MaNCC = {model.MaNCC},
+						@TenNCC = {model.TenNCC}, 
+						@DienThoaiNCC = {model.DienThoaiNCC}, 
+						@EmailNCC = {model.EmailNCC}, 
+						@DiaChiNCC = {model.DiaChiNCC}
+				");
+
+				TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
+				return RedirectToAction(nameof(NhaCC_Admin));
 			}
 			return View(model);
 		}
 
 		// DELETE - GET
 		[HttpGet]
-		public IActionResult Delete(string id)
+		public async Task<IActionResult> Delete(string id)
 		{
-			var ncc = _context.NhaCCs.FirstOrDefault(x => x.MaNCC == id);
+			if (string.IsNullOrEmpty(id))
+				return BadRequest();
+
+			var ncc = (await _context.NhaCC.FromSqlInterpolated($"EXEC sp_NhaCC_GetByID @MaNCC = {id}")
+				.ToListAsync())
+				.FirstOrDefault();
+
 			if (ncc == null)
 				return NotFound();
+
 			return View(ncc);
 		}
 
 		// DELETE - POST
 		[HttpPost, ActionName("Delete")]
 		[ValidateAntiForgeryToken]
-		public IActionResult DeleteConfirmed(string id)
+		public async Task<IActionResult> DeleteConfirmed(string id)
 		{
-			var ncc = _context.NhaCCs.FirstOrDefault(x => x.MaNCC == id);
+			if (string.IsNullOrEmpty(id))
+			{
+				TempData["ErrorMessage"] = "ID không hợp lệ!";
+				return BadRequest();
+			}
+
+			// Kiểm tra tồn tại
+			var ncc = (await _context.NhaCC.FromSqlInterpolated($"EXEC sp_NhaCC_GetByID @MaNCC = {id}")
+				.ToListAsync())
+				.FirstOrDefault();
+
 			if (ncc != null)
 			{
-				_context.NhaCCs.Remove(ncc);
-				_context.SaveChanges();
+				await _context.Database.ExecuteSqlInterpolatedAsync($@"EXEC sp_NhaCC_Delete @MaNCC = {id}");
 				TempData["SuccessMessage"] = "Đã xóa nhà cung cấp thành công!";
 			}
 			else
@@ -114,8 +165,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 				TempData["ErrorMessage"] = "Không tìm thấy nhà cung cấp cần xóa!";
 			}
 
-			return RedirectToAction("NhaCC_Admin");
+			return RedirectToAction(nameof(NhaCC_Admin));
 		}
-
 	}
 }

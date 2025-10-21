@@ -2,27 +2,14 @@
 
 @{
     ViewBag.Title = "Quản lý Nhà Cung Cấp";
-    ViewBag.tg = new
-    {
-        HoTen = "Nguyễn Thị Thanh Hương",
-        MSSV = "65131234",
-        DienThoai = "0935724503",
-    };
-    var tg = ViewBag.tg; // Add this line to define 'tg' in the current context
 }
 
 <h2 class="mb-3 text-primary">
     <i class="fa-solid fa-truck"></i> Danh sách Nhà Cung Cấp
 </h2>
 
-<div style="display:flex; gap:20px;">
-    <p>Tên tác giả: @tg?.HoTen</p>
-    <p>MSSV: @tg?.MSSV</p>
-    <p>Điện thoại: @tg?.DienThoai</p>
-</div>
-
 <p>
-    <a href="@Url.Action("Create", "Admin")" class="btn btn-success">
+    <a href="@Url.Action("Create", "NhaCC")" class="btn btn-success">
         <i class="fa-solid fa-circle-plus"></i> Thêm Nhà Cung Cấp
     </a>
 </p>
