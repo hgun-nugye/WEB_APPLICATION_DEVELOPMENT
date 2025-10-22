@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\nhacccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\nhacccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\nhacc\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\nhacc\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\xacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\xacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\tinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\tinhcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\tinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\tinh\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\tinh\\tinh_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\tinh\\tinh_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\nhacc\\nhacc_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\nhacc\\nhacc_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\nhacccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\nhacccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,106 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T04:43:46.991Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NhaCCController.cs",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\NhaCCController.cs",
               "RelativeDocumentMoniker": "Controllers\\NhaCCController.cs",
               "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\NhaCCController.cs",
               "RelativeToolTip": "Controllers\\NhaCCController.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAIwEIAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAADwv4IAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T04:39:06.247Z",
+              "WhenOpened": "2025-10-22T06:01:27.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "XaController.cs",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\XaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\XaController.cs",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\XaController.cs",
+              "RelativeToolTip": "Controllers\\XaController.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAIwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T06:00:06.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\NhaCC\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\NhaCC\\Create.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\NhaCC\\Create.cshtml",
-              "RelativeToolTip": "Views\\NhaCC\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T04:38:51.498Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Tinh\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tinh\\Create.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Tinh\\Create.cshtml",
-              "RelativeToolTip": "Views\\Tinh\\Create.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T04:38:23.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T04:37:09.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NhaCC_Admin.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\NhaCC\\NhaCC_Admin.cshtml",
-              "RelativeDocumentMoniker": "Views\\NhaCC\\NhaCC_Admin.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\NhaCC\\NhaCC_Admin.cshtml",
-              "RelativeToolTip": "Views\\NhaCC\\NhaCC_Admin.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T04:36:42.059Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "TinhController.cs",
               "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\TinhController.cs",
               "RelativeDocumentMoniker": "Controllers\\TinhController.cs",
               "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\TinhController.cs",
               "RelativeToolTip": "Controllers\\TinhController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAkwEIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAI4AAAAAAAAAAAAuwKcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-21T04:34:01.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Tinh_Admin.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Tinh\\Tinh_Admin.cshtml",
-              "RelativeDocumentMoniker": "Views\\Tinh\\Tinh_Admin.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Tinh\\Tinh_Admin.cshtml",
-              "RelativeToolTip": "Views\\Tinh\\Tinh_Admin.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-10-21T04:30:38.365Z",
+              "WhenOpened": "2025-10-22T05:59:39.63Z",
               "EditorCaption": ""
             }
           ]

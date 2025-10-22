@@ -76,6 +76,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 			}
 			catch (Exception ex)
 			{
+				ModelState.AddModelError("", $"{ex.Message}");
 				TempData["ErrorMessage"] = "Lỗi: " + ex.Message;
 				return View(model);
 			}
@@ -106,8 +107,9 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				// Nếu Update không trả về dữ liệu, ta dùng ExecuteSqlInterpolatedAsync
-				await _context.Database.ExecuteSqlInterpolatedAsync($@"
+				try
+				{
+					await _context.Database.ExecuteSqlInterpolatedAsync($@"
 					EXEC sp_NhaCC_Update 
 						@MaNCC = {model.MaNCC},
 						@TenNCC = {model.TenNCC}, 
@@ -116,8 +118,15 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 						@DiaChiNCC = {model.DiaChiNCC}
 				");
 
-				TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
-				return RedirectToAction(nameof(NhaCC_Admin));
+					TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
+					return RedirectToAction(nameof(NhaCC_Admin));
+				}
+				catch (Exception ex)
+				{
+					ModelState.AddModelError("", $"{ex.Message}");
+
+					TempData["ErrorMessage"] = "Lỗi: " + ex.Message;
+				}
 			}
 			return View(model);
 		}

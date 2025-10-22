@@ -2,11 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div>
-    <h1 class="display-4 text-center">Chọn thông tin muốn xem</h1>
-    <div class="d-flex justify-content-center flex-wrap w-100 mt-4">
-        <a class="btn btn-primary btn-lg m-2" asp-controller="NhaCC" asp-action="NhaCC_Admin">Quản lý Nhà Cung cấp</a>
-        <a class="btn btn-success btn-lg m-2" asp-controller="Tinh" asp-action="Tinh_Admin">Quản lý Tỉnh</a>
-        <a class="btn btn-dark btn-lg m-2" asp-controller="Orders" asp-action="Index">Quản lý đơn hàng</a>
+<div class="container py-5 text-center">
+    <h1 class="display-5 fw-bold mb-4">
+        Chọn thông tin muốn xem
+    </h1>
+
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+        <a asp-controller="NhaCC" asp-action="NhaCC_Admin"
+           class="btn btn-primary btn-lg px-4 shadow-lg">
+            <i class="fa-solid fa-store me-2"></i> Quản lý Nhà Cung Cấp
+        </a>
+
+        <a asp-controller="Tinh" asp-action="Tinh_Admin"
+           class="btn btn-success btn-lg px-4 shadow-lg">
+            <i class="fa-solid fa-map me-2"></i> Quản lý Tỉnh
+        </a>
+
+        <a asp-controller="Xa" asp-action="Xa_Admin"
+           class="btn btn-info btn-lg px-4 shadow-lg text-white">
+            <i class="fa-solid fa-location-dot me-2"></i> Quản lý Xã
+        </a>
     </div>
 </div>

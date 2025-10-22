@@ -22,11 +22,13 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 			modelBuilder.Entity<Xa>().HasKey(x => x.MaXa);
 
 			// Khóa ngoại: Xa → Tinh
+
 			modelBuilder.Entity<Xa>()
-				.HasOne<Tinh>()
-				.WithMany()
-				.HasForeignKey(x => x.MaTinh)
-				.OnDelete(DeleteBehavior.Restrict);
+			.HasOne(x => x.Tinh)
+			.WithMany(t => t.DsXa)
+			.HasForeignKey(x => x.MaTinh)
+			.OnDelete(DeleteBehavior.Restrict);
+
 		}
 	}
 }
