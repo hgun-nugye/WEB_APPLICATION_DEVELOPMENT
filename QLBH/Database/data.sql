@@ -33,6 +33,7 @@ EXEC sp_NhaCC_Insert N'Unilever Việt Nam', '0909988776', 'support@unilever.vn'
 EXEC sp_NhaCC_Insert N'Senka Japan', '0911222333', 'info@senka.jp',N'Tokyo, Nhật Bản';
 GO
 
+
 -- 6. Gian hàng
 EXEC sp_GianHang_Insert 
     N'L''Oréal Official Store', 
