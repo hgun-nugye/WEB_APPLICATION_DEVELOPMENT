@@ -10,7 +10,7 @@ CREATE OR ALTER PROC sp_DonMuaHang_Insert
 (
     @NgayMH DATE,
     @MaNCC VARCHAR(10),
-    @ChiTiet CTMH_List READONLY  -- ← table-valued parameter
+    @ChiTiet CTMH_List READONLY 
 )
 AS
 BEGIN

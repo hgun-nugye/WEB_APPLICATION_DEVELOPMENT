@@ -1,6 +1,7 @@
 ﻿using Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models;
 using Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
@@ -29,7 +30,18 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 		//READ - Danh sách Xã
 		public async Task<IActionResult> Xa_Admin()
 		{
-			var dsXa = await _context.Xa.FromSqlRaw("EXEC sp_Xa_GetAll")
+			var dsXa = await _context.Xa.Join(
+					_context.Tinh,
+					x => x.MaTinh,
+					t => t.MaTinh,
+					(x, t) => new Xa
+					{
+						MaXa = x.MaXa,
+						TenXa = x.TenXa,
+						MaTinh = x.MaTinh,
+						TenTinh = t.TenTinh
+					}
+				)
 				.ToListAsync();
 
 			return View(dsXa);
@@ -52,6 +64,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 		[HttpGet]
 		public IActionResult Create()
 		{
+			ViewBag.MaTinhList = new SelectList(_context.Tinh, "MaTinh", "TenTinh");
 			return View();
 		}
 

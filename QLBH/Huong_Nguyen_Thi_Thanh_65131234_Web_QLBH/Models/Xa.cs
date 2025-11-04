@@ -14,6 +14,9 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		[Required]
 		public short MaTinh { get; set; }
 
+		[NotMapped]
+		public string? TenTinh { get; set; }
+
 		[ForeignKey("MaTinh")]
 		public Tinh? Tinh { get; set; }
 

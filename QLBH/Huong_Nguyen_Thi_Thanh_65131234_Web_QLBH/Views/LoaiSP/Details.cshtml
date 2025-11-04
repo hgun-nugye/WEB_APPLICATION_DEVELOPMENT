@@ -1,0 +1,20 @@
+﻿@model Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.LoaiSP
+@{
+    ViewBag.Title = "Chi tiết Loại sản phẩm";
+}
+
+<h2 class="text-info mb-3">
+    <i class="fa-solid fa-eye"></i> Chi tiết Loại sản phẩm 
+</h2>
+
+<div class="card shadow-sm border-info">
+    <div class="card-body">
+        <p><strong><i class="fa-solid fa-hashtag"></i> Mã Loại sản phẩm:</strong> @Model.MaLoai</p>
+        <p><strong><i class="fa-solid fa-id-badge"></i> Tên Loại sản phẩm:</strong> @Model.TenLSP</p>
+        <p><strong><i class="fa-solid fa-id-badge"></i> Mã Nhóm sản phẩm:</strong> @Model.MaNhom</p>
+    </div>
+</div>
+
+<a asp-action="LoaiSP_Admin" class="btn btn-secondary mt-3">
+    <i class="fa-solid fa-arrow-left"></i> Quay lại
+</a>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Thông tin tác giả";
+    dynamic tg = ViewBag.tg;
+}
+<h2 style="font-size: 30px;font-weight:bold;">THÔNG TIN TÁC GIẢ</h2>
+<div style="display:flex; gap:20px; font-weight:bold; font-size:24px">
+    <p>Tên tác giả: @tg.HoTen</p>
+    <p>MSSV: @tg.MSSV</p>
+    <p>Điện thoại: @tg.DienThoai</p>
+</div>
+

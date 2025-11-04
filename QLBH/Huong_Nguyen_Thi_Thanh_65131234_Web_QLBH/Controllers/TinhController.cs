@@ -77,7 +77,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 				{
 					ModelState.AddModelError("", $"{ex.Message}");
 
-					TempData["ErrorMessage"] = "Lỗi: " + ex.Message;
+					TempData["ErrorMessage"] = "" + ex.Message;
 				}
 			}
 			return View(model);

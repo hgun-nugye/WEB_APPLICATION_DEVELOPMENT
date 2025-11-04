@@ -8,7 +8,7 @@ EXEC sp_Tinh_Insert N'Đà Nẵng';
 GO
 
 -- 2. Xã
-EXEC sp_Xa_Insert N'Phường Bến Nghé', 2;
+EXEC sp_Xa_Insert N'Phường Bến NGH000000é', 2;
 EXEC sp_Xa_Insert N'Phường Cầu Ông Lãnh', 2;
 EXEC sp_Xa_Insert N'Phường Tràng Tiền', 1;
 EXEC sp_Xa_Insert N'Phường Hải Châu 1', 3;
@@ -18,13 +18,15 @@ GO
 EXEC sp_NhomSP_Insert N'Mỹ phẩm chăm sóc da';
 EXEC sp_NhomSP_Insert N'Mỹ phẩm trang điểm';
 EXEC sp_NhomSP_Insert N'Sản phẩm chăm sóc tóc';
+EXEC sp_NhomSP_Insert N'Sản phẩm chăm sóc da';
 GO
 
 -- 4. Loại sản phẩm
-EXEC sp_LoaiSP_Insert N'Sữa rửa mặt', 'NSP01';
-EXEC sp_LoaiSP_Insert N'Kem chống nắng', 'NSP01';
-EXEC sp_LoaiSP_Insert N'Son môi', 'NSP02';
-EXEC sp_LoaiSP_Insert N'Dầu gội', 'NSP03';
+EXEC sp_LoaiSP_Insert N'Sữa rửa mặt', 'NSP0000001';
+EXEC sp_LoaiSP_Insert N'Kem chống nắng', 'NSP0000001';
+EXEC sp_LoaiSP_Insert N'Son môi', 'NSP0000002';
+EXEC sp_LoaiSP_Insert N'Dầu gội', 'NSP0000003';
+EXEC sp_LoaiSP_Insert N'Tẩy trang', 'NSP0000004';
 GO
 
 -- 5. Nhà cung cấp 
@@ -59,10 +61,10 @@ EXEC sp_GianHang_Insert
 GO
 
 -- 7. Sản phẩm
-EXEC sp_SanPham_Insert N'Sữa rửa mặt Senka Perfect Whip', 120000, N'Làm sạch sâu, tạo bọt mịn', N'senka_whip.jpg', 'LSP01', 'GH03';
-EXEC sp_SanPham_Insert N'Kem chống nắng L''Oréal UV Defender', 250000, N'Chống nắng SPF50+, dưỡng da', N'loreal_uv.jpg', 'LSP02', 'GH01';
-EXEC sp_SanPham_Insert N'Son lì Maybelline Matte Ink', 220000, N'Màu chuẩn, lâu trôi', N'matte_ink.jpg', 'LSP03', 'GH01';
-EXEC sp_SanPham_Insert N'Dầu gội Dove phục hồi hư tổn', 180000, N'Phục hồi tóc yếu gãy rụng', N'dove_repair.jpg', 'LSP04', 'GH02';
+EXEC sp_SanPham_Insert N'Sữa rửa mặt Senka Perfect Whip', 120000, N'Làm sạch sâu, tạo bọt mịn', N'senka_whip.jpg', 'LSP0000001', 'GH00000003';
+EXEC sp_SanPham_Insert N'Kem chống nắng L''Oréal UV Defender', 250000, N'Chống nắng SPF50+, dưỡng da', N'loreal_uv.jpg', 'LSP0000002', 'GH00000001';
+EXEC sp_SanPham_Insert N'Son lì Maybelline Matte Ink', 220000, N'Màu chuẩn, lâu trôi', N'matte_ink.jpg', 'LSP0000003', 'GH00000001';
+EXEC sp_SanPham_Insert N'Dầu gội Dove phục hồi hư tổn', 180000, N'Phục hồi tóc yếu gãy rụng', N'dove_repair.jpg', 'LSP0000004', 'GH00000002';
 GO
 
 -- 8. Khách hàng

@@ -14,8 +14,11 @@
         <input asp-for="TenXa" class="form-control" />
     </div>
     <div class="form-group mb-3">
-        <label><i class="fa-solid fa-id-badge"></i> Mã Tỉnh</label>
-        <input asp-for="MaTinh" class="form-control" />
+        <label><i class="fa-solid fa-layer-group"></i> Tên Tỉnh</label>
+        <select asp-for="MaTinh" asp-items="ViewBag.MaTinhList" class="form-control">
+            <option value="">-- Chọn tỉnh --</option>
+        </select>
+        <span asp-validation-for="MaTinh" class="text-danger"></span>
     </div>
     
     <button type="submit" class="btn btn-success">
