@@ -1,0 +1,130 @@
+﻿@model Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.DonMuaHang
+
+@{
+    ViewBag.Title = "Thêm Đơn mua hàng";
+    var ctList = Model.CTMHs ?? new List<Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.CTMH> { new() };
+
+    // Tạo options HTML cho JS
+    var spOptions = string.Join("", ((SelectList)ViewBag.MaSP).Select(sp =>
+        $"<option value='{sp.Value}'>{sp.Text}</option>"));
+}
+
+<h2 class="text-primary mb-3">
+    <i class="fa-solid fa-cart-plus"></i> Thêm Đơn mua hàng
+</h2>
+
+@using (Html.BeginForm("Create", "DonMuaHang", FormMethod.Post, new { @class = "border p-4 rounded shadow-sm bg-light" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger mb-3" })
+
+    <!-- Ngày mua hàng -->
+    <div class="mb-3">
+        <label asp-for="NgayMH" class="form-label">
+            <i class="fa-solid fa-calendar-days"></i> Ngày mua hàng
+        </label>
+        <input asp-for="NgayMH" class="form-control" type="date" readonly />
+        <span asp-validation-for="NgayMH" class="text-danger"></span>
+    </div>
+
+    <!-- Nhà cung cấp -->
+    <div class="mb-3">
+        <label asp-for="MaNCC" class="form-label">
+            <i class="fa-solid fa-store"></i> Nhà cung cấp
+        </label>
+        <select asp-for="MaNCC" class="form-select" asp-items="ViewBag.MaNCC">
+            <option value="">-- Chọn nhà cung cấp --</option>
+        </select>
+        <span asp-validation-for="MaNCC" class="text-danger"></span>
+    </div>
+
+    <!-- Chi tiết sản phẩm -->
+    <h5 class="text-success mt-4"><i class="fa-solid fa-list"></i> Chi tiết sản phẩm</h5>
+    <table class="table table-bordered mt-2" id="ctmhTable">
+        <thead class="table-light">
+            <tr>
+                <th>Sản phẩm</th>
+                <th>Số lượng</th>
+                <th>Đơn giá</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < ctList.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <select name="CTMHs[@i].MaSP" class="form-select">
+                            <option value="">-- Chọn sản phẩm --</option>
+                            @Html.Raw(spOptions.Replace("value='" + ctList[i].MaSP + "'", "value='" + ctList[i].MaSP + "' selected"))
+                        </select>
+                    </td>
+                    <td>
+                        <input name="CTMHs[@i].SLM" type="number" min="1" class="form-control" value="@ctList[i].SLM" />
+                    </td>
+                    <td>
+                        <input name="CTMHs[@i].DGM" type="number" step="100" class="form-control" value="@ctList[i].DGM" />
+                    </td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-danger btn-sm removeRow">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary mb-3" id="addRow">
+        <i class="fa-solid fa-plus"></i> Thêm sản phẩm
+    </button>
+
+    <br />
+
+    <button type="submit" class="btn btn-success me-2">
+        <i class="fa-solid fa-circle-plus"></i> Thêm đơn
+    </button>
+    <a asp-action="DonMuaHang_Admin" asp-controller="DonMuaHang" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i> Quay lại
+    </a>
+}
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addRowBtn = document.getElementById("addRow");
+            const tableBody = document.querySelector("#ctmhTable tbody");
+            let index = @ctList.Count;
+
+            const spOptionsHtml = `@Html.Raw(spOptions)`;
+
+            addRowBtn.addEventListener("click", () => {
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td>
+                        <select name="CTMHs[${index}].MaSP" class="form-select">
+                            <option value="">-- Chọn sản phẩm --</option>
+                            ${spOptionsHtml}
+                        </select>
+                    </td>
+                    <td><input name="CTMHs[${index}].SLM" type="number" min="1" class="form-control" /></td>
+                    <td><input name="CTMHs[${index}].DGM" type="number" step="100" class="form-control" /></td>
+                    <td class="text-center">
+                        <button type="button" class="btn btn-danger btn-sm removeRow">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                `;
+                tableBody.appendChild(newRow);
+                index++;
+            });
+
+            tableBody.addEventListener("click", function (e) {
+                if (e.target.closest(".removeRow")) {
+                    e.target.closest("tr").remove();
+                }
+            });
+        });
+    </script>
+}

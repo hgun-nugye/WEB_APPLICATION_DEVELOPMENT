@@ -25,6 +25,6 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		[ForeignKey("MaKH")]
 		public virtual KhachHang? KhachHang { get; set; }
 
-		public virtual ICollection<CTBH>? CTBHs { get; set; }
+		public virtual List<CTBH>? CTBHs { get; set; }
 	}
 }

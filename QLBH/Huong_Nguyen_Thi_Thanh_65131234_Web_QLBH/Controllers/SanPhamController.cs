@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 {
@@ -17,6 +16,17 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 			_context = context;
 		}
 
+		// Trang chính hiển thị thông tin cá nhân
+		public IActionResult Index()
+		{
+			ViewBag.tg = new
+			{
+				HoTen = "Nguyễn Thị Thanh Hương",
+				MSSV = "65131234",
+				DienThoai = "0935724503",
+			};
+			return View();
+		}
 		// ===============================
 		// DANH SÁCH SẢN PHẨM
 		// ===============================
@@ -155,7 +165,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 
 			var spList = await _context.SanPham
 				.FromSqlRaw("EXEC sp_SanPham_GetByID_Detail @MaSP", new SqlParameter("@MaSP", id)).ToListAsync();
-			
+
 			var sp = spList.FirstOrDefault();
 
 			ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);

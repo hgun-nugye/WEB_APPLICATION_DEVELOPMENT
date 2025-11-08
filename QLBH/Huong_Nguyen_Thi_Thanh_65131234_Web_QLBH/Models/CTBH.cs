@@ -10,12 +10,12 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		[Key, Column(Order = 0)]
 		[StringLength(11)]
 		[Display(Name = "Mã đơn bán hàng")]
-		public required string MaDBH { get; set; }
+		public string? MaDBH { get; set; }
 
 		[Key, Column(Order = 1)]
 		[StringLength(10)]
 		[Display(Name = "Mã sản phẩm")]
-		public required string MaSP { get; set; }
+		public string? MaSP { get; set; }
 
 		[Required(ErrorMessage = "Số lượng bán không được để trống")]
 		[Display(Name = "Số lượng bán")]

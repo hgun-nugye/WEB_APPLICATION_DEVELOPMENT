@@ -10,10 +10,6 @@ wwwroot\images\dau_goi.jpg
 wwwroot\images\dau_goi_dove.jpg
 wwwroot\images\Dau_goi_Dove.webp
 wwwroot\images\kem_chong_nang_Loreal.webp
-wwwroot\images\sanpham\71c600f6-a836-4b1d-9086-7b29b5ade064.webp
-wwwroot\images\sanpham\ce69d7ec-2125-4e25-a403-ca70bd311668.webp
-wwwroot\images\sanpham\d469d285-c79e-4872-a462-d6adeb871fd9.jpg
-wwwroot\images\sanpham\d9834e47-4e65-4355-98bc-689c10a2b4c7.webp
 wwwroot\images\Senka_srm.webp
 wwwroot\images\shopping.webp
 wwwroot\js\site.js

@@ -50,7 +50,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		[NotMapped]
 		public string? TenLoai { get; set; }
 
-		[NotMapped] // không ánh xạ DB, chỉ dùng upload
+		[NotMapped] 
 		public IFormFile? AnhFile { get; set; }
 
 	}

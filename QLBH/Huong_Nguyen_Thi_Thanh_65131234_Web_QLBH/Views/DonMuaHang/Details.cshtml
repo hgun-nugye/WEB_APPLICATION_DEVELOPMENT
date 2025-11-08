@@ -1,0 +1,31 @@
+﻿@model Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.DonMuaHang
+
+@{
+    ViewBag.Title = "Chi tiết Đơn mua hàng";
+}
+
+<h2 class="mb-3 text-info">
+    <i class="fa-solid fa-eye"></i> Chi tiết Đơn mua hàng
+</h2>
+
+<div class="card shadow-sm p-4">
+    <dl class="row">
+        <dt class="col-sm-3">Mã Đơn:</dt>
+        <dd class="col-sm-9">@Model.MaDMH</dd>
+
+        <dt class="col-sm-3">Ngày mua hàng:</dt>
+        <dd class="col-sm-9">@Model.NgayMH.ToString("dd/MM/yyyy")</dd>
+
+        <dt class="col-sm-3">Mã Nhà cung cấp:</dt>
+        <dd class="col-sm-9">@Model.MaNCC</dd>
+
+        <dt class="col-sm-3">Nhà cung cấp:</dt>
+        <dd class="col-sm-9">@Model.TenNCC</dd>
+    </dl>      
+</div>
+<a href="@Url.Action("DonMuaHang_Admin", "DonMuaHang")" class="btn btn-secondary">
+    <i class="fa-solid fa-arrow-left"></i> Quay lại
+</a>
+<a href="@Url.Action("Edit", "DonMuaHang", new { id = Model.MaDMH })" class="btn btn-warning text-white">
+    <i class="fa-solid fa-pen-to-square"></i> Sửa
+</a>

@@ -79,14 +79,14 @@ DECLARE @CTMH CTMH_List;
 -- Thêm nhiều sản phẩm vào danh sách
 INSERT INTO @CTMH (MaSP, SLM, DGM)
 VALUES 
-('SP01', 10, 120000),
-('SP02', 20, 180000),
-('SP03', 15, 200000);
+('SP00000001', 10, 120000),
+('SP00000002', 20, 180000),
+('SP00000003', 15, 200000);
 
 -- Gọi procedure 
 EXEC sp_DonMuaHang_Insert 
      @NgayMH = '2025-10-20',
-     @MaNCC = 'NCC01',
+     @MaNCC = 'NCC0000002',
      @ChiTiet = @CTMH;
 GO
 
@@ -95,14 +95,14 @@ DECLARE @CTBH CTBH_List;
 
 INSERT INTO @CTBH (MaSP, SLB, DGB)
 VALUES
-('SP01', 2, 150000),
-('SP02', 1, 180000),
-('SP03', 5, 120000);
+('SP000000001', 2, 150000),
+('SP000000002', 1, 180000),
+('SP000000003', 5, 120000);
 
 -- Gọi procedure
 EXEC sp_DonBanHang_Insert 
      @NgayBH = '2025-10-20',
-     @MaKH = 'KH001',
+     @MaKH = 'KH000000001',
      @ChiTiet = @CTBH;
 GO
 

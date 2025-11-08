@@ -41,8 +41,6 @@ BEGIN
     SELECT @MaDMH, MaSP, SLM, DGM
     FROM @ChiTiet;
 
-    -- Xuất mã đơn mới
-    SELECT @MaDMH AS MaDonMuaHangMoi;
 END;
 GO
 
@@ -63,7 +61,14 @@ GO
 
 CREATE OR ALTER PROC sp_DonMuaHang_GetAll AS SELECT * FROM DonMuaHang;
 GO
+CREATE OR ALTER PROC sp_DonMuaHang_GetAll_Detail AS SELECT D.MaDMH, D.NgayMH, D.MaNCC, N.TenNCC AS TenNCC FROM DonMuaHang D join NhaCC N ON N.MaNCC=D.MaNCC;
+GO
 CREATE OR ALTER PROC sp_DonMuaHang_GetById @MaDMH CHAR(11) AS SELECT * FROM DonMuaHang WHERE MaDMH = @MaDMH;
+GO
+CREATE OR ALTER PROC sp_DonMuaHang_GetById_Detail @MaDMH CHAR(11) 
+	AS SELECT D.MaDMH, D.NgayMH, D.MaNCC, N.TenNCC AS TenNCC
+	FROM DonMuaHang D join NhaCC N ON N.MaNCC=D.MaNCC 
+	WHERE MaDMH = @MaDMH;
 GO
 CREATE OR ALTER PROC sp_DonMuaHang_Delete @MaDMH CHAR(11) AS DELETE FROM DonMuaHang WHERE MaDMH = @MaDMH;
 GO
