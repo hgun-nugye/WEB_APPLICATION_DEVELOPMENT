@@ -2,7 +2,9 @@
 using Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 {
@@ -15,163 +17,257 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 			_context = context;
 		}
 
-		// READ - Danh sách sản phẩm
+		// ===============================
+		// DANH SÁCH SẢN PHẨM
+		// ===============================
 		public async Task<IActionResult> SanPham_Admin()
 		{
-			var dsSanPham = await _context.SanPham
-				.FromSqlRaw("EXEC sp_SanPham_GetAll")
-				.Include(sp => sp.LoaiSP)
+			var ds = await _context.SanPham
+				.Join(
+					_context.LoaiSP,
+					sp => sp.MaLoai,
+					lsp => lsp.MaLoai,
+					(sp, lsp) => new { sp, lsp }
+				)
+				.Join(
+					_context.GianHang,
+					temp => temp.sp.MaGH,
+					gh => gh.MaGH,
+					(temp, gh) => new SanPham
+					{
+						MaSP = temp.sp.MaSP,
+						TenSP = temp.sp.TenSP,
+						DonGia = temp.sp.DonGia,
+						MoTaSP = temp.sp.MoTaSP,
+						AnhMH = temp.sp.AnhMH,
+						MaLoai = temp.sp.MaLoai,
+						TenLoai = temp.lsp.TenLSP,
+						MaGH = temp.sp.MaGH,
+						TenGH = gh.TenGH
+					}
+				)
 				.ToListAsync();
 
-			return View(dsSanPham);
+			return View(ds);
 		}
 
-		// DETAILS - Xem chi tiết
+		// ===============================
+		// CHI TIẾT SẢN PHẨM
+		// ===============================
 		public async Task<IActionResult> Details(string id)
 		{
-			if (string.IsNullOrEmpty(id))
-				return BadRequest();
+			if (id == null) return NotFound();
 
 			var sp = (await _context.SanPham
-				.FromSqlInterpolated($"EXEC sp_SanPham_GetByID @MaSP = {id}")
-				.Include(x => x.LoaiSP)
-				.ToListAsync())
-				.FirstOrDefault();
-
-			if (sp == null)
-				return NotFound();
+			.FromSqlRaw("EXEC sp_SanPham_GetByID_Detail @MaSP", new SqlParameter("@MaSP", id))
+			.ToListAsync())
+			.FirstOrDefault();
 
 			return View(sp);
 		}
 
-		// CREATE (GET)
-		[HttpGet]
+		// ===============================
+		// CREATE - GET
+		// ===============================
 		public IActionResult Create()
 		{
-			ViewBag.MaLoaiList = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP");
+			ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP");
+			ViewBag.GianHang = new SelectList(_context.GianHang, "MaGH", "TenGH");
 			return View();
 		}
 
-		// CREATE (POST)
+		// ===============================
+		// CREATE - POST
+		// ===============================
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create(SanPham model)
+		public async Task<IActionResult> Create(SanPham sp)
 		{
-			if (ModelState.IsValid)
+			try
 			{
-				try
+				// Kiểm tra file ảnh
+				if (sp.AnhFile == null || sp.AnhFile.Length == 0)
 				{
-					await _context.Database.ExecuteSqlInterpolatedAsync($@"
-                        EXEC sp_SanPham_Insert 
-                            @TenSP = N'{model.TenSP}',
-                            @DonGia = {model.DonGia},
-                            @MoTaSP = N'{model.MoTaSP}',
-                            @AnhMH = N'{model.AnhMH}',
-                            @MaLoai = {model.MaLoai},
-							@MaGH = {model.MaGH}
-                    ");
+					TempData["ErrorMessage"] = "Vui lòng chọn ảnh minh họa!";
+					ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);
+					ViewBag.GianHang = new SelectList(_context.GianHang, "MaGH", "TenGH", sp.MaGH);
+					return View(sp);
+				}
 
-					TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
-					return RedirectToAction(nameof(SanPham_Admin));
-				}
-				catch (Exception ex)
+				// Kiểm tra các thông tin còn lại
+				if (!ModelState.IsValid)
 				{
-					ModelState.AddModelError("", ex.Message);
-					TempData["ErrorMessage"] = ex.Message;
+					TempData["ErrorMessage"] = "Vui lòng nhập đầy đủ thông tin hợp lệ!";
+					ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);
+					ViewBag.GianHang = new SelectList(_context.GianHang, "MaGH", "TenGH", sp.MaGH);
+					return View(sp);
 				}
+
+				// Upload file
+				var fileName = Guid.NewGuid() + Path.GetExtension(sp.AnhFile.FileName); // tạo tên duy nhất
+				var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images");
+				if (!Directory.Exists(folderPath))
+					Directory.CreateDirectory(folderPath);
+
+				var savePath = Path.Combine(folderPath, fileName);
+				using (var stream = new FileStream(savePath, FileMode.Create))
+				{
+					await sp.AnhFile.CopyToAsync(stream);
+				}
+				sp.AnhMH = fileName;
+
+				// Gọi procedure SQL để insert
+				await _context.Database.ExecuteSqlRawAsync(
+					"EXEC sp_SanPham_Insert @TenSP, @DonGia, @MoTaSP, @AnhMH, @MaLoai, @MaGH",
+					new SqlParameter("@TenSP", sp.TenSP),
+					new SqlParameter("@DonGia", sp.DonGia),
+					new SqlParameter("@MoTaSP", sp.MoTaSP),
+					new SqlParameter("@AnhMH", sp.AnhMH),
+					new SqlParameter("@MaLoai", sp.MaLoai ?? (object)DBNull.Value),
+					new SqlParameter("@MaGH", sp.MaGH)
+				);
+
+				TempData["SuccessMessage"] = "Thêm sản phẩm thành công!";
+				return RedirectToAction(nameof(SanPham_Admin));
 			}
-			else
+			catch (SqlException ex)
 			{
-				TempData["ErrorMessage"] = "Dữ liệu không hợp lệ!";
+				TempData["ErrorMessage"] = "Lỗi từ SQL: " + ex.Message;
+			}
+			catch (Exception ex)
+			{
+				TempData["ErrorMessage"] = "Đã xảy ra lỗi: " + ex.Message;
 			}
 
-			ViewBag.MaLoaiList = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", model.MaLoai);
-			return View(model);
-		}
-
-		// EDIT (GET)
-		[HttpGet]
-		public async Task<IActionResult> Edit(string id)
-		{
-			if (string.IsNullOrEmpty(id))
-				return BadRequest();
-
-			var sp = (await _context.SanPham
-				.FromSqlInterpolated($"EXEC sp_SanPham_GetByID @MaSP = {id}")
-				.ToListAsync())
-				.FirstOrDefault();
-
-			if (sp == null)
-				return NotFound();
-
-			ViewBag.MaLoaiList = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);
+			// 5️⃣ Nếu có lỗi, load lại dropdown và trả view
+			ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);
+			ViewBag.GianHang = new SelectList(_context.GianHang, "MaGH", "TenGH", sp.MaGH);
 			return View(sp);
 		}
 
-		// EDIT (POST)
+
+		// ===============================
+		// EDIT - GET
+		// ===============================
+		public async Task<IActionResult> Edit(string id)
+		{
+			if (id == null) return NotFound();
+
+			var spList = await _context.SanPham
+				.FromSqlRaw("EXEC sp_SanPham_GetByID_Detail @MaSP", new SqlParameter("@MaSP", id)).ToListAsync();
+			
+			var sp = spList.FirstOrDefault();
+
+			ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);
+			ViewBag.GianHang = new SelectList(_context.GianHang, "MaGH", "TenGH", sp.MaGH);
+
+			return View(sp);
+		}
+
+		// ===============================
+		// EDIT - POST
+		// ===============================
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Edit(SanPham model)
+		public async Task<IActionResult> Edit(string id, SanPham sp, IFormFile? AnhFile)
 		{
-			if (ModelState.IsValid)
+			if (id != sp.MaSP) return NotFound();
+
+			try
 			{
-				try
+				if (ModelState.IsValid)
 				{
-					await _context.Database.ExecuteSqlInterpolatedAsync($@"
-                        EXEC sp_SanPham_Update 
-                            @MaSP = {model.MaSP},
-                            @TenSP = N'{model.TenSP}',
-                            @DonGia = {model.DonGia},
-                            @MoTaSP = N'{model.MoTaSP}',
-                            @AnhMH = N'{model.AnhMH}',
-                            @MaLoai = {model.MaLoai},
-							@MaGH = {model.MaGH}
-                    ");
+					// Lấy sản phẩm cũ từ DB để giữ ảnh nếu không chọn file mới
+					var oldSP = await _context.SanPham
+						.AsNoTracking()
+						.FirstOrDefaultAsync(x => x.MaSP == sp.MaSP);
+
+					if (oldSP == null) return NotFound();
+
+					string? anhPath;
+
+					if (AnhFile != null && AnhFile.Length > 0)
+					{
+						// Lưu file mới
+						var fileName = Guid.NewGuid() + Path.GetExtension(AnhFile.FileName);
+						var savePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+						using (var stream = new FileStream(savePath, FileMode.Create))
+						{
+							await AnhFile.CopyToAsync(stream);
+						}
+						anhPath = "/images/" + fileName;
+					}
+					else
+					{
+						// Giữ ảnh cũ
+						anhPath = oldSP.AnhMH; // phải lấy nguyên giá trị DB
+					}
+
+					// Gọi stored procedure để update
+					await _context.Database.ExecuteSqlRawAsync(
+						"EXEC sp_SanPham_Update @MaSP, @TenSP, @DonGia, @MoTaSP, @AnhMH, @MaLoai, @MaGH",
+						new SqlParameter("@MaSP", sp.MaSP),
+						new SqlParameter("@TenSP", sp.TenSP),
+						new SqlParameter("@DonGia", sp.DonGia),
+						new SqlParameter("@MoTaSP", sp.MoTaSP ?? string.Empty),
+						new SqlParameter("@AnhMH", anhPath ?? string.Empty),
+						new SqlParameter("@MaLoai", sp.MaLoai),
+						new SqlParameter("@MaGH", sp.MaGH)
+					);
 
 					TempData["SuccessMessage"] = "Cập nhật sản phẩm thành công!";
 					return RedirectToAction(nameof(SanPham_Admin));
 				}
-				catch (Exception ex)
-				{
-					TempData["ErrorMessage"] = ex.Message;
-				}
+			}
+			catch (Exception ex)
+			{
+				TempData["ErrorMessage"] = ex.Message;
 			}
 
-			ViewBag.MaLoaiList = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", model.MaLoai);
-			return View(model);
-		}
-
-		// DELETE (GET)
-		[HttpGet]
-		public async Task<IActionResult> Delete(string id)
-		{
-			if (string.IsNullOrEmpty(id))
-				return BadRequest();
-
-			var sp = (await _context.SanPham
-				.FromSqlInterpolated($"EXEC sp_SanPham_GetByID @MaSP = {id}")
-				.ToListAsync())
-				.FirstOrDefault();
-
-			if (sp == null)
-				return NotFound();
+			// Nếu validation lỗi, load lại select list
+			ViewBag.LoaiSP = new SelectList(_context.LoaiSP, "MaLoai", "TenLSP", sp.MaLoai);
+			ViewBag.GianHang = new SelectList(_context.GianHang, "MaGH", "TenGH", sp.MaGH);
 
 			return View(sp);
 		}
 
-		// DELETE (POST)
+
+		// ===============================
+		// DELETE - GET
+		// ===============================
+		public async Task<IActionResult> Delete(string id)
+		{
+			if (id == null) return NotFound();
+
+			var sp = await _context.SanPham
+				.FromSqlRaw("EXEC sp_SanPham_GetByID_Detail @MaSP", new SqlParameter("@MaSP", id))
+				.AsNoTracking()
+				.FirstOrDefaultAsync();
+
+			if (sp == null) return NotFound();
+
+			return View(sp);
+		}
+
+		// ===============================
+		// DELETE - POST
+		// ===============================
 		[HttpPost, ActionName("Delete")]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> DeleteConfirmed(string id)
 		{
-			if (string.IsNullOrEmpty(id))
+			try
 			{
-				TempData["ErrorMessage"] = "Mã sản phẩm không hợp lệ!";
-				return RedirectToAction(nameof(SanPham_Admin));
+				await _context.Database.ExecuteSqlRawAsync(
+					"EXEC sp_SanPham_Delete @MaSP",
+					new SqlParameter("@MaSP", id)
+				);
+				TempData["SuccessMessage"] = "Xóa sản phẩm thành công!";
 			}
-
-			await _context.Database.ExecuteSqlInterpolatedAsync($@"EXEC sp_SanPham_Delete @MaSP = {id}");
-			TempData["SuccessMessage"] = "Đã xóa sản phẩm thành công!";
+			catch (Exception ex)
+			{
+				TempData["ErrorMessage"] = ex.Message;
+			}
 
 			return RedirectToAction(nameof(SanPham_Admin));
 		}

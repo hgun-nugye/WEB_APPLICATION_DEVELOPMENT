@@ -3,39 +3,44 @@
 }
 
 <div class="container-fluid py-5 text-center">
-    <h1 class="display-5 fw-bold mb-4">
-        Chọn thông tin muốn xem
+    <h1 class="display-5 fw-bold mb-4 text-primary">
+        Chọn thông tin muốn quản lý
     </h1>
 
-    <div class="d-flex justify-content-center flex-wrap gap-3 text-white">
+    <div class="d-flex justify-content-center flex-wrap gap-4">
         <a asp-controller="NhaCC" asp-action="NhaCC_Admin"
-           class="btn btn-primary btn-lg px-4 shadow-lg">
-            <i class="fa-solid fa-store me-2"></i> Quản lý Nhà Cung Cấp
+           class="btn btn-outline-primary btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-truck-field me-2"></i> Nhà Cung Cấp
         </a>
 
         <a asp-controller="KhachHang" asp-action="KhachHang_Admin"
-           class="btn btn-danger btn-lg px-4 shadow-lg">
-            <i class="fa-solid fa-user me-2"></i> Quản lý Khách Hàng
+           class="btn btn-outline-danger btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-users me-2"></i> Khách Hàng
         </a>
 
         <a asp-controller="Tinh" asp-action="Tinh_Admin"
-           class="btn btn-success btn-lg px-4 shadow-lg">
-            <i class="fa-solid fa-map me-2"></i> Quản lý Tỉnh
+           class="btn btn-outline-success btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-map-location-dot me-2"></i> Tỉnh
         </a>
 
         <a asp-controller="Xa" asp-action="Xa_Admin"
-           class="btn btn-info btn-lg px-4 shadow-lg text-white">
-            <i class="fa-solid fa-location-dot me-2"></i> Quản lý Xã
+           class="btn btn-outline-info btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-location-crosshairs me-2"></i> Xã
         </a>
 
         <a asp-controller="NhomSP" asp-action="NhomSP_Admin"
-           class="btn btn-info btn-lg px-4 shadow-lg text-white">
-            <i class="fa-solid fa-layer-group me-2"></i> Quản lý Nhóm Sản Phẩm
+           class="btn btn-outline-warning btn-lg px-4 py-3 shadow rounded-pill text-dark">
+            <i class="fa-solid fa-cubes me-2"></i> Nhóm Sản Phẩm
         </a>
 
         <a asp-controller="LoaiSP" asp-action="LoaiSP_Admin"
-           class="btn btn-info btn-lg px-4 shadow-lg text-white">
-            <i class="fa-solid fa-layer-group me-2"></i> Quản lý Loại Sản Phẩm
+           class="btn btn-outline-secondary btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-tags me-2"></i> Loại Sản Phẩm
+        </a>
+
+        <a asp-controller="SanPham" asp-action="SanPham_Admin"
+           class="btn btn-outline-dark btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-box-open me-2"></i> Sản Phẩm
         </a>
     </div>
 </div>

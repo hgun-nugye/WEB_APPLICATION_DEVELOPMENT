@@ -5,7 +5,7 @@ CREATE OR ALTER PROC sp_SanPham_Insert
 (
     @TenSP NVARCHAR(50),
     @DonGia MONEY,
-    @MoTaSP TEXT,
+    @MoTaSP NVARCHAR(MAX),
     @AnhMH NVARCHAR(50),
     @MaLoai VARCHAR(10),
     @MaGH VARCHAR(10)
@@ -35,7 +35,7 @@ CREATE OR ALTER PROC sp_SanPham_Update
     @MaSP VARCHAR(10),
     @TenSP NVARCHAR(50),
     @DonGia MONEY,
-    @MoTaSP TEXT,
+    @MoTaSP NVARCHAR(MAX),
     @AnhMH NVARCHAR(50),
     @MaLoai VARCHAR(10),
     @MaGH VARCHAR(10)
@@ -91,3 +91,47 @@ BEGIN
     DELETE FROM SanPham WHERE MaSP = @MaSP;
 END
 GO
+
+-- ====== SHOW NAME DETAIL ======
+CREATE OR ALTER PROC sp_SanPham_GetAll_Detail
+AS
+BEGIN
+    SELECT 
+        sp.MaSP,
+        sp.TenSP,
+        sp.DonGia,
+        sp.MoTaSP,
+        sp.AnhMH,
+        sp.MaLoai,
+        lsp.TenLSP AS TenLoai,
+        sp.MaGH,
+        gh.TenGH AS TenGH
+    FROM SanPham sp
+    JOIN LoaiSP lsp ON sp.MaLoai = lsp.MaLoai
+    JOIN GianHang gh ON sp.MaGH = gh.MaGH;
+END;
+GO
+
+CREATE OR ALTER PROC sp_SanPham_GetByID_Detail
+(
+    @MaSP VARCHAR(10)
+)
+AS
+BEGIN
+    SELECT 
+        sp.MaSP,
+        sp.TenSP,
+        sp.DonGia,
+        sp.MoTaSP,
+        sp.AnhMH,
+        sp.MaLoai,
+        lsp.TenLSP AS TenLoai,
+        sp.MaGH,
+        gh.TenGH AS TenGH
+    FROM SanPham sp
+    JOIN LoaiSP lsp ON sp.MaLoai = lsp.MaLoai
+    JOIN GianHang gh ON sp.MaGH = gh.MaGH
+    WHERE sp.MaSP = @MaSP;
+END;
+GO
+

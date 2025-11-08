@@ -9,7 +9,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 		{
 		}
 
-		// Khai báo DbSet cho các bảng
+		// ======== Khai báo DbSet cho các bảng ========
 		public DbSet<NhaCC> NhaCC { get; set; } = null!;
 		public DbSet<KhachHang> KhachHang { get; set; } = null!;
 		public DbSet<Tinh> Tinh { get; set; } = null!;
@@ -17,11 +17,17 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 		public DbSet<NhomSP> NhomSP { get; set; } = null!;
 		public DbSet<LoaiSP> LoaiSP { get; set; } = null!;
 		public DbSet<GianHang> GianHang { get; set; } = null!;
-		public DbSet<SanPham> SanPham { get; set; } = null!; 
+		public DbSet<SanPham> SanPham { get; set; } = null!;
+
+		// 🆕 Bổ sung thêm các bảng giao dịch
+		public DbSet<DonMuaHang> DonMuaHang { get; set; } = null!;
+		public DbSet<DonBanHang> DonBanHang { get; set; } = null!;
+		public DbSet<CTMH> CTMH { get; set; } = null!;
+		public DbSet<CTBH> CTBH { get; set; } = null!;
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			// ======== Thiết lập khóa chính ========
+			// ======== Khóa chính ========
 			modelBuilder.Entity<NhaCC>().HasKey(n => n.MaNCC);
 			modelBuilder.Entity<KhachHang>().HasKey(kh => kh.MaKH);
 			modelBuilder.Entity<Tinh>().HasKey(t => t.MaTinh);
@@ -29,7 +35,15 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 			modelBuilder.Entity<NhomSP>().HasKey(nsp => nsp.MaNhom);
 			modelBuilder.Entity<LoaiSP>().HasKey(lsp => lsp.MaLoai);
 			modelBuilder.Entity<GianHang>().HasKey(g => g.MaGH);
-			modelBuilder.Entity<SanPham>().HasKey(sp => sp.MaSP); 
+			modelBuilder.Entity<SanPham>().HasKey(sp => sp.MaSP);
+
+			// 🆕 Khóa chính mới
+			modelBuilder.Entity<DonMuaHang>().HasKey(d => d.MaDMH);
+			modelBuilder.Entity<DonBanHang>().HasKey(d => d.MaDBH);
+
+			// 🆕 Khóa chính kép cho chi tiết
+			modelBuilder.Entity<CTMH>().HasKey(ct => new { ct.MaDMH, ct.MaSP });
+			modelBuilder.Entity<CTBH>().HasKey(ct => new { ct.MaDBH, ct.MaSP });
 
 			// ======== Khóa ngoại: Xa → Tinh ========
 			modelBuilder.Entity<Xa>()
@@ -48,7 +62,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 			// ======== Khóa ngoại: SanPham → LoaiSP ========
 			modelBuilder.Entity<SanPham>()
 				.HasOne(sp => sp.LoaiSP)
-				.WithMany(lsp =>lsp.SanPhams)
+				.WithMany(lsp => lsp.SanPhams)
 				.HasForeignKey(sp => sp.MaLoai)
 				.OnDelete(DeleteBehavior.Cascade);
 
@@ -57,6 +71,46 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 				.HasOne(sp => sp.GianHang)
 				.WithMany(g => g.DsSanPham)
 				.HasForeignKey(sp => sp.MaGH)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			// 🆕 ======== Khóa ngoại: DonMuaHang → NhaCC ========
+			modelBuilder.Entity<DonMuaHang>()
+				.HasOne(d => d.NhaCC)
+				.WithMany(n => n.DonMuaHangs)
+				.HasForeignKey(d => d.MaNCC)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			// 🆕 ======== Khóa ngoại: DonBanHang → KhachHang ========
+			modelBuilder.Entity<DonBanHang>()
+				.HasOne(d => d.KhachHang)
+				.WithMany(kh => kh.DonBanHangs)
+				.HasForeignKey(d => d.MaKH)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			// 🆕 ======== Khóa ngoại: CTMH → DonMuaHang và SanPham ========
+			modelBuilder.Entity<CTMH>()
+				.HasOne(ct => ct.DonMuaHang)
+				.WithMany(d => d.CTMHs)
+				.HasForeignKey(ct => ct.MaDMH)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			modelBuilder.Entity<CTMH>()
+				.HasOne(ct => ct.SanPham)
+				.WithMany(sp => sp.CTMHs)
+				.HasForeignKey(ct => ct.MaSP)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			// 🆕 ======== Khóa ngoại: CTBH → DonBanHang và SanPham ========
+			modelBuilder.Entity<CTBH>()
+				.HasOne(ct => ct.DonBanHang)
+				.WithMany(d => d.CTBHs)
+				.HasForeignKey(ct => ct.MaDBH)
+				.OnDelete(DeleteBehavior.Cascade);
+
+			modelBuilder.Entity<CTBH>()
+				.HasOne(ct => ct.SanPham)
+				.WithMany(sp => sp.CTBHs)
+				.HasForeignKey(ct => ct.MaSP)
 				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}

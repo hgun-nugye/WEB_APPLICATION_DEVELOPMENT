@@ -20,5 +20,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 
 		[StringLength(255)]
 		public required string DiaChiKH { get; set; }
+
+		public virtual ICollection<DonBanHang>? DonBanHangs { get; set; }
 	}
 }
