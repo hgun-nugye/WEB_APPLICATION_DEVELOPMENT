@@ -95,14 +95,14 @@ DECLARE @CTBH CTBH_List;
 
 INSERT INTO @CTBH (MaSP, SLB, DGB)
 VALUES
-('SP000000001', 2, 150000),
-('SP000000002', 1, 180000),
-('SP000000003', 5, 120000);
+('SP00000001', 2, 150000),
+('SP00000002', 1, 180000),
+('SP00000003', 5, 120000);
 
 -- Gọi procedure
 EXEC sp_DonBanHang_Insert 
      @NgayBH = '2025-10-20',
-     @MaKH = 'KH000000001',
+     @MaKH = 'KH00000001',
      @ChiTiet = @CTBH;
 GO
 

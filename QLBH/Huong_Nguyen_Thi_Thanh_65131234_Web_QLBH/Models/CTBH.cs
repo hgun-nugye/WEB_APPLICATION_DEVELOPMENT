@@ -34,5 +34,7 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		// 🔗 Khóa ngoại đến SanPham
 		[ForeignKey("MaSP")]
 		public virtual SanPham? SanPham { get; set; }
+
+		public string? TenSP { get; set; }
 	}
 }

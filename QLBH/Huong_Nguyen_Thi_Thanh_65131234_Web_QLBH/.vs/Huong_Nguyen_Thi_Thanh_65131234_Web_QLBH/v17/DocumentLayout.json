@@ -3,52 +3,12 @@
   "WorkspaceRootPath": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\ctbh\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\ctbh\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\loaispcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\loaispcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\sanpham\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\sanpham\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\donmuahang\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\donmuahang\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\gianhang\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\gianhang\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\controllers\\donmuahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:controllers\\donmuahangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\donmuahang\\donmuahang_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\donmuahang\\donmuahang_admin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\donmuahang\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\donmuahang\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\donmuahang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\donmuahang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\donmuahang\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\donmuahang\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\gianhang\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\gianhang\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|d:\\study\\web_application _development\\thuc_hanh\\qlbh\\huong_nguyen_thi_thanh_65131234_web_qlbh\\views\\ctmh\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{44C66758-C4AA-4D6C-A12A-1A452F501449}|Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.csproj|solutionrelative:views\\ctmh\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,157 +35,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAABSAAAAAAAAAA==",
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\CTBH\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\CTBH\\Delete.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\CTBH\\Delete.cshtml",
+              "RelativeToolTip": "Views\\CTBH\\Delete.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:09:30.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LoaiSPController.cs",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\LoaiSPController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoaiSPController.cs",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\LoaiSPController.cs",
-              "RelativeToolTip": "Controllers\\LoaiSPController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T10:09:07.822Z",
+              "WhenOpened": "2025-11-08T14:19:54.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SanPhamController.cs",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\SanPhamController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SanPhamController.cs",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\SanPhamController.cs",
-              "RelativeToolTip": "Controllers\\SanPhamController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T10:09:00.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\SanPham\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\SanPham\\Delete.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\SanPham\\Delete.cshtml",
-              "RelativeToolTip": "Views\\SanPham\\Delete.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADMAAABAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\CTMH\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\CTMH\\Delete.cshtml",
+              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\CTMH\\Delete.cshtml",
+              "RelativeToolTip": "Views\\CTMH\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:08:48.694Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\GianHang\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\GianHang\\Delete.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\GianHang\\Delete.cshtml",
-              "RelativeToolTip": "Views\\GianHang\\Delete.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:05:47.441Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\DonMuaHang\\Create.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Create.cshtml",
-              "RelativeToolTip": "Views\\DonMuaHang\\Create.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFEAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:01:09.804Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\DonMuaHang\\Delete.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Delete.cshtml",
-              "RelativeToolTip": "Views\\DonMuaHang\\Delete.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:01:08.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\DonMuaHang\\Details.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Details.cshtml",
-              "RelativeToolTip": "Views\\DonMuaHang\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:00:59.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\DonMuaHang\\Edit.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\Edit.cshtml",
-              "RelativeToolTip": "Views\\DonMuaHang\\Edit.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T09:57:17.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DonMuaHangController.cs",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\DonMuaHangController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DonMuaHangController.cs",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Controllers\\DonMuaHangController.cs",
-              "RelativeToolTip": "Controllers\\DonMuaHangController.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAAAANYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T08:55:10.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DonMuaHang_Admin.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\DonMuaHang_Admin.cshtml",
-              "RelativeDocumentMoniker": "Views\\DonMuaHang\\DonMuaHang_Admin.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\DonMuaHang\\DonMuaHang_Admin.cshtml",
-              "RelativeToolTip": "Views\\DonMuaHang\\DonMuaHang_Admin.cshtml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAACkAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T08:55:05.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\GianHang\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\GianHang\\Edit.cshtml",
-              "ToolTip": "D:\\STUDY\\WEB_APPLICATION _DEVELOPMENT\\THUC_HANH\\QLBH\\Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH\\Views\\GianHang\\Edit.cshtml",
-              "RelativeToolTip": "Views\\GianHang\\Edit.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-08T10:00:39.066Z",
+              "WhenOpened": "2025-11-08T14:19:46.38Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,21 @@
+﻿@model Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.CTBH
+
+@{
+    ViewBag.Title = "Chi tiết sản phẩm trong đơn bán";
+}
+
+<h2 class="text-info mb-3">
+    <i class="fa-solid fa-circle-info"></i> Chi tiết sản phẩm trong đơn
+</h2>
+
+<div class="card shadow-sm p-4">
+    <p><strong>Mã Đơn:</strong> @Model.MaDBH</p>
+    <p><strong>Tên SP:</strong> @Model.TenSP</p>
+    <p><strong>Số lượng:</strong> @Model.SLB</p>
+    <p><strong>Đơn giá:</strong> @Model.DGB.ToString("N0")</p>
+    <p><strong>Thành tiền:</strong> @((Model.SLB * Model.DGB).ToString("N0"))</p>
+</div>
+
+<a asp-action="Index" asp-route-maDBH="@Model.MaDBH" class="btn btn-secondary mt-3">
+    <i class="fa-solid fa-arrow-left"></i> Quay lại
+</a>

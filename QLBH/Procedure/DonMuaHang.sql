@@ -1,4 +1,6 @@
-﻿CREATE TYPE dbo.CTMH_List AS TABLE
+﻿USE Huong_Nguyen_Thi_Thanh_6513124_DB_QLBH;
+GO
+CREATE TYPE dbo.CTMH_List AS TABLE
 (
     MaSP VARCHAR(10),
     SLM INT,

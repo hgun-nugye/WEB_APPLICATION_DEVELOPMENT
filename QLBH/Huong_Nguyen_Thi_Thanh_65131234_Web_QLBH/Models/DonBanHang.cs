@@ -10,21 +10,22 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		[Key]
 		[StringLength(11)]
 		[Display(Name = "Mã đơn bán hàng")]
-		public required string MaDBH { get; set; }
+		public string? MaDBH { get; set; }
 
 		[Required(ErrorMessage = "Ngày bán hàng không được để trống")]
 		[Display(Name = "Ngày bán hàng")]
 		[DataType(DataType.Date)]
 		public DateTime NgayBH { get; set; }
 
-		[Required(ErrorMessage = "Khách hàng không được để trống")]
 		[StringLength(10)]
 		[Display(Name = "Mã khách hàng")]
-		public required string MaKH { get; set; }
+		public string? MaKH { get; set; }
 
 		[ForeignKey("MaKH")]
 		public virtual KhachHang? KhachHang { get; set; }
 
 		public virtual List<CTBH>? CTBHs { get; set; }
+
+		public string? TenKH { get; set; }
 	}
 }

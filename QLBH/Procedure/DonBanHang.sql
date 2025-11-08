@@ -1,4 +1,6 @@
-﻿CREATE TYPE dbo.CTBH_List AS TABLE
+﻿USE Huong_Nguyen_Thi_Thanh_6513124_DB_QLBH;
+GO
+CREATE TYPE dbo.CTBH_List AS TABLE
 (
     MaSP VARCHAR(10),
     SLB INT,
@@ -41,8 +43,6 @@ BEGIN
     SELECT @MaDBH, MaSP, SLB, DGB
     FROM @ChiTiet;
 
-    -- Trả về mã đơn mới tạo
-    SELECT @MaDBH AS MaDonBanHangMoi;
 END;
 GO
 
@@ -63,7 +63,15 @@ GO
 
 CREATE OR ALTER PROC sp_DonBanHang_GetAll AS SELECT * FROM DonBanHang;
 GO
+
+CREATE OR ALTER PROC sp_DonBanHang_GetAll_Detail AS SELECT D.*, K.TenKH FROM DonBanHang D JOIN KhachHang K ON K.MaKH=D.MaKH;
+GO
+
 CREATE OR ALTER PROC sp_DonBanHang_GetById @MaDBH CHAR(11) AS SELECT * FROM DonBanHang WHERE MaDBH = @MaDBH; 
 GO
+
+CREATE OR ALTER PROC sp_DonBanHang_GetById_Detail @MaDBH CHAR(11) AS SELECT D.*, K.TenKH FROM DonBanHang D JOIN KhachHang K ON K.MaKH=D.MaKH WHERE MaDBH = @MaDBH; 
+GO
+
 CREATE OR ALTER PROC sp_DonBanHang_Delete @MaDBH CHAR(11) AS DELETE FROM DonBanHang WHERE MaDBH = @MaDBH; 
 GO
