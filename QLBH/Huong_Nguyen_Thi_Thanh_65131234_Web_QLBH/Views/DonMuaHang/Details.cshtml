@@ -1,31 +1,80 @@
-﻿@model Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.DonMuaHang
+﻿@model List<Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models.DonMuaHangDetail>
 
 @{
     ViewBag.Title = "Chi tiết Đơn mua hàng";
+
+    // Lấy dòng đầu tiên để hiển thị thông tin chung
+    var don = Model.FirstOrDefault();
 }
 
 <h2 class="mb-3 text-info">
-    <i class="fa-solid fa-eye"></i> Chi tiết Đơn mua hàng
+    <i class="fa-solid fa-eye"></i> Chi tiết Đơn mua hàng - Đơn @don?.MaDMH
 </h2>
 
-<div class="card shadow-sm p-4">
-    <dl class="row">
-        <dt class="col-sm-3">Mã Đơn:</dt>
-        <dd class="col-sm-9">@Model.MaDMH</dd>
+@if (don != null)
+{
+    <div class="container">
+        <div class="card shadow-sm p-4 mb-4">
+            <dl class="row">
+                <dt class="col-sm-3">Ngày mua hàng:</dt>
+                <dd class="col-sm-9">@don.NgayMH.ToString("dd/MM/yyyy")</dd>
 
-        <dt class="col-sm-3">Ngày mua hàng:</dt>
-        <dd class="col-sm-9">@Model.NgayMH.ToString("dd/MM/yyyy")</dd>
+                <dt class="col-sm-3">Nhà cung cấp:</dt>
+                <dd class="col-sm-9">@don.TenNCC</dd>
+            </dl>
+        </div>
 
-        <dt class="col-sm-3">Mã Nhà cung cấp:</dt>
-        <dd class="col-sm-9">@Model.MaNCC</dd>
+        <h4 class="text-success mt-4">
+            <i class="fa-solid fa-boxes-stacked"></i> Danh sách sản phẩm mua
+        </h4>
 
-        <dt class="col-sm-3">Nhà cung cấp:</dt>
-        <dd class="col-sm-9">@Model.TenNCC</dd>
-    </dl>      
+        <table class="table table-bordered table-striped mt-2">
+            <thead class="table-light">
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th class="text-center">Số lượng mua</th>
+                    <th class="text-end">Đơn giá mua</th>
+                    <th class="text-end">Thành tiền</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var ct in Model)
+                {
+                    <tr>
+                        <td>@ct.TenSP</td>
+                        <td class="text-center">@ct.SLM</td>
+                        <td class="text-end">@ct.DGM?.ToString("N0")</td>
+                        <td class="text-end">@(((ct.SLM ?? 0) * (ct.DGM ?? 0)).ToString("N0"))</td>
+
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr class="table-secondary fw-bold">
+                    <td colspan="3" class="text-end">Tổng cộng:</td>
+                    <td class="text-end">
+                        @Model.Sum(x => (x.SLM ?? 0) * (x.DGM ?? 0)).ToString("N0")
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+        Không tìm thấy đơn mua hàng cần xem chi tiết.
+    </div>
+}
+
+<div class="mt-3">
+    <a href="@Url.Action("DonMuaHang_Admin", "DonMuaHang")" class="btn btn-secondary">
+        <i class="fa-solid fa-arrow-left"></i> Quay lại
+    </a>
+    @if (don != null)
+    {
+        <a href="@Url.Action("Edit", "DonMuaHang", new { id = don.MaDMH })" class="btn btn-warning text-white">
+            <i class="fa-solid fa-pen-to-square"></i> Sửa
+        </a>
+    }
 </div>
-<a href="@Url.Action("DonMuaHang_Admin", "DonMuaHang")" class="btn btn-secondary">
-    <i class="fa-solid fa-arrow-left"></i> Quay lại
-</a>
-<a href="@Url.Action("Edit", "DonMuaHang", new { id = Model.MaDMH })" class="btn btn-warning text-white">
-    <i class="fa-solid fa-pen-to-square"></i> Sửa
-</a>

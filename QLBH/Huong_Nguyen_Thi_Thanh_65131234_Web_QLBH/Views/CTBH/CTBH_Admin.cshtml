@@ -9,15 +9,6 @@
         <i class="fa-solid fa-list"></i> Chi tiết bán hàng - Đơn: @ViewBag.MaDBH
     </h2>
 
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-    }
-    @if (TempData["ErrorMessage"] != null)
-    {
-        <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
-    }
-
     <div class="mb-3">
         <a asp-action="Create" asp-route-maDBH="@ViewBag.MaDBH" class="btn btn-primary">
             <i class="fa-solid fa-plus"></i> Thêm chi tiết

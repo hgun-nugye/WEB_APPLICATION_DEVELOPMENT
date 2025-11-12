@@ -3,28 +3,32 @@
     ViewBag.Title = "Thêm Xã";
 }
 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-<h2 class="text-success mb-3">
-    <i class="fa-solid fa-circle-plus"></i> Thêm Xã
-</h2>
 
-<form asp-action="Create" method="post" class="border p-4 rounded shadow-sm bg-light">
-    
-    <div class="form-group mb-3">
-        <label><i class="fa-solid fa-id-badge"></i> Tên Xã</label>
-        <input asp-for="TenXa" class="form-control" />
-    </div>
-    <div class="form-group mb-3">
-        <label><i class="fa-solid fa-layer-group"></i> Tên Tỉnh</label>
-        <select asp-for="MaTinh" asp-items="ViewBag.MaTinhList" class="form-control">
-            <option value="">-- Chọn tỉnh --</option>
-        </select>
-        <span asp-validation-for="MaTinh" class="text-danger"></span>
-    </div>
-    
-    <button type="submit" class="btn btn-success">
-        <i class="fa-solid fa-save"></i> Lưu
-    </button>
-    <a asp-action="Xa_Admin" class="btn btn-secondary">
-        <i class="fa-solid fa-arrow-left"></i> Quay lại
-    </a>
-</form>
+<div class=" container">
+    <h2 class="text-success mb-3">
+        <i class="fa-solid fa-circle-plus"></i> Thêm Xã
+    </h2>
+
+    <form asp-action="Create" method="post" class="border p-4 rounded shadow-sm bg-light">
+
+        <div class="form-group mb-3">
+            <label><i class="fa-solid fa-id-badge"></i> Tên Xã</label>
+            <input asp-for="TenXa" class="form-control" />
+        </div>
+        <div class="form-group mb-3">
+            <label><i class="fa-solid fa-layer-group"></i> Tên Tỉnh</label>
+            <select asp-for="MaTinh" asp-items="ViewBag.MaTinhList" class="form-control">
+                <option value="">-- Chọn tỉnh --</option>
+            </select>
+            <span asp-validation-for="MaTinh" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            <i class="fa-solid fa-save"></i> Lưu
+        </button>
+        <a asp-action="Xa_Admin" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </a>
+    </form>
+
+</div>

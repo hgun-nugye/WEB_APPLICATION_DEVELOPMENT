@@ -46,15 +46,15 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 
 			var param = new SqlParameter("@MaDMH", id);
 
-			var result = await _context.DonMuaHang
-				.FromSqlRaw("EXEC sp_DonMuaHang_GetById_Detail @MaDMH", param)
+			var result = await _context.DonMuaHangDetail
+				.FromSqlRaw("EXEC sp_DonMuaHang_GetById_CTMH @MaDMH", param)
 				.ToListAsync();
 
-			var dmh = result.FirstOrDefault();
-			if (dmh == null) return NotFound();
+			if (result == null || !result.Any()) return NotFound();
 
-			return View(dmh);
+			return View(result);
 		}
+
 
 		// ===================== CREATE (GET) =====================
 		public IActionResult Create()

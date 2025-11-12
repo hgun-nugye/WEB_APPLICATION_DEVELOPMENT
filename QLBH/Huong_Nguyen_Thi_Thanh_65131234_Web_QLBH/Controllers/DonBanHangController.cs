@@ -45,14 +45,11 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Controllers
 			if (string.IsNullOrEmpty(id)) return NotFound();
 
 			var param = new SqlParameter("@MaDBH", id);
-			var result = await _context.DonBanHang
-				.FromSqlRaw("EXEC sp_DonBanHang_GetById_Detail @MaDBH", param)
+			var result = await _context.DonBanHangDetail
+				.FromSqlRaw("EXEC sp_DonBanHang_GetById_CTBH @MaDBH", param)
 				.ToListAsync();
-
-			var dbh = result.FirstOrDefault();
-			if (dbh == null) return NotFound();
-
-			return View(dbh);
+			
+			return View(result);
 		}
 
 		// ===================== CREATE (GET) =====================

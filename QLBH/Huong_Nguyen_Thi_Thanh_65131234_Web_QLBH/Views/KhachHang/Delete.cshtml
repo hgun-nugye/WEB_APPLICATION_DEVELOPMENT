@@ -4,32 +4,35 @@
     ViewBag.Title = "Xóa Khách hàng";
 }
 
-<h2 class="text-danger mb-3">
-    <i class="fa-solid fa-trash"></i> Xóa Khách hàng
-</h2>
+<div class="container">
+    <h2 class="text-danger mb-3">
+        <i class="fa-solid fa-trash"></i> Xóa Khách hàng
+    </h2>
 
-<div class="alert alert-warning shadow-sm">
-    <i class="fa-solid fa-triangle-exclamation"></i>
-    Bạn có chắc muốn xóa <strong>@Model.TenKH</strong> không?
+    <div class="alert alert-warning shadow-sm">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Bạn có chắc muốn xóa <strong>@Model.TenKH</strong> không?
+    </div>
+
+    <div class="card p-3 shadow-sm">
+        <p><strong>Mã KH:</strong> @Model.MaKH</p>
+        <p><strong>Điện thoại:</strong> @Model.DienThoaiKH</p>
+        <p><strong>Email:</strong> @Model.EmailKH</p>
+        <p><strong>Số điện thoại:</strong> @Model.DienThoaiKH</p>
+        <p><strong>Địa chỉ:</strong> @Model.DiaChiKH</p>
+    </div>
+
+    <form id="deleteForm" asp-action="Delete" method="post" class="mt-3">
+        <input type="hidden" asp-for="MaKH" />
+        <button type="button" class="btn btn-danger" onclick="confirmDelete()">
+            <i class="fa-solid fa-trash-can"></i> Xóa
+        </button>
+        <a asp-action="KhachHang_Admin" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </a>
+    </form>
 </div>
 
-<div class="card p-3 shadow-sm">
-    <p><strong>Mã KH:</strong> @Model.MaKH</p>
-    <p><strong>Điện thoại:</strong> @Model.DienThoaiKH</p>
-    <p><strong>Email:</strong> @Model.EmailKH</p>
-    <p><strong>Số điện thoại:</strong> @Model.DienThoaiKH</p>
-    <p><strong>Địa chỉ:</strong> @Model.DiaChiKH</p>
-</div>
-
-<form id="deleteForm" asp-action="Delete" method="post" class="mt-3">
-    <input type="hidden" asp-for="MaKH" />
-    <button type="button" class="btn btn-danger" onclick="confirmDelete()">
-        <i class="fa-solid fa-trash-can"></i> Xóa
-    </button>
-    <a asp-action="KhachHang_Admin" class="btn btn-secondary">
-        <i class="fa-solid fa-arrow-left"></i> Quay lại
-    </a>
-</form>
 
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

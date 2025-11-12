@@ -19,9 +19,12 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Services
 		public DbSet<GianHang> GianHang { get; set; } = null!;
 		public DbSet<SanPham> SanPham { get; set; } = null!;
 
-		// 🆕 Bổ sung thêm các bảng giao dịch
+		// Bổ sung thêm các bảng giao dịch
 		public DbSet<DonMuaHang> DonMuaHang { get; set; } = null!;
+		public DbSet<DonMuaHangDetail> DonMuaHangDetail { get; set; } = null!;
 		public DbSet<DonBanHang> DonBanHang { get; set; } = null!;
+		public DbSet<DonBanHangDetail> DonBanHangDetail { get; set; } = null!;
+
 		public DbSet<CTMH> CTMH { get; set; } = null!;
 		public DbSet<CTBH> CTBH { get; set; } = null!;
 

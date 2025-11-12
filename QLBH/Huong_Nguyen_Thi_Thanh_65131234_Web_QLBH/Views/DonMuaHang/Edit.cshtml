@@ -13,23 +13,25 @@
     @Html.AntiForgeryToken()
     @Html.HiddenFor(model => model.MaDMH)
 
-    <div class="card shadow-sm p-4">
-        <div class="mb-3">
-            @Html.LabelFor(model => model.NgayMH, "Ngày mua hàng", new { @class = "form-label fw-bold" })
-            @Html.TextBoxFor(model => model.NgayMH, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
-            @Html.ValidationMessageFor(model => model.NgayMH, "", new { @class = "text-danger" })
-        </div>
+    <div class="container">
+        <div class="card shadow-sm p-4">
+            <div class="mb-3">
+                @Html.LabelFor(model => model.NgayMH, "Ngày mua hàng", new { @class = "form-label fw-bold" })
+                @Html.TextBoxFor(model => model.NgayMH, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                @Html.ValidationMessageFor(model => model.NgayMH, "", new { @class = "text-danger" })
+            </div>
 
-        <div class="mb-3">
-            @Html.LabelFor(model => model.MaNCC, "Nhà cung cấp", new { @class = "form-label fw-bold" })
-            @Html.DropDownList("MaNCC", null, "-- Chọn nhà cung cấp --", new { @class = "form-select" })
-            @Html.ValidationMessageFor(model => model.MaNCC, "", new { @class = "text-danger" })
-        </div>                   
+            <div class="mb-3">
+                @Html.LabelFor(model => model.MaNCC, "Nhà cung cấp", new { @class = "form-label fw-bold" })
+                @Html.DropDownList("MaNCC", null, "-- Chọn nhà cung cấp --", new { @class = "form-select" })
+                @Html.ValidationMessageFor(model => model.MaNCC, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <a href="@Url.Action("DonMuaHang_Admin", "DonMuaHang")" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </a>
+        <button type="submit" class="btn btn-warning text-white">
+            <i class="fa-solid fa-floppy-disk"></i> Cập nhật
+        </button>
     </div>
-    <a href="@Url.Action("DonMuaHang_Admin", "DonMuaHang")" class="btn btn-secondary">
-        <i class="fa-solid fa-arrow-left"></i> Quay lại
-    </a>
-    <button type="submit" class="btn btn-warning text-white">
-        <i class="fa-solid fa-floppy-disk"></i> Cập nhật
-    </button>
 }

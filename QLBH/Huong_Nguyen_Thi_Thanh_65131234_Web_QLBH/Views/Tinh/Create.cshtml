@@ -4,21 +4,23 @@
 }
 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-<h2 class="text-success mb-3">
-    <i class="fa-solid fa-circle-plus"></i> Thêm Tỉnh
-</h2>
+<div class="container">
+    <h2 class="text-success mb-3">
+        <i class="fa-solid fa-circle-plus"></i> Thêm Tỉnh
+    </h2>
 
-<form asp-action="Create" method="post" class="border p-4 rounded shadow-sm bg-light">
-    
-    <div class="form-group mb-3">
-        <label><i class="fa-solid fa-id-badge"></i> Tên Tinh</label>
-        <input asp-for="TenTinh" class="form-control" />
-    </div>
-    
-    <button type="submit" class="btn btn-success">
-        <i class="fa-solid fa-save"></i> Lưu
-    </button>
-    <a asp-action="Tinh_Admin" class="btn btn-secondary">
-        <i class="fa-solid fa-arrow-left"></i> Quay lại
-    </a>
-</form>
+    <form asp-action="Create" method="post" class="border p-4 rounded shadow-sm bg-light">
+
+        <div class="form-group mb-3">
+            <label><i class="fa-solid fa-id-badge"></i> Tên Tinh</label>
+            <input asp-for="TenTinh" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            <i class="fa-solid fa-save"></i> Lưu
+        </button>
+        <a asp-action="Tinh_Admin" class="btn btn-secondary">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại
+        </a>
+    </form>
+</div>

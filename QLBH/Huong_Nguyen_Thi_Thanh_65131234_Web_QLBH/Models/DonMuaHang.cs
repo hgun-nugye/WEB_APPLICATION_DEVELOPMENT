@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
@@ -25,5 +26,19 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 		public virtual List<CTMH>? CTMHs { get; set; }
 
 		public string? TenNCC { get; set; }
+		
 	}
+
+	[Keyless] // vì không có khóa chính riêng
+	public class DonMuaHangDetail
+	{
+		public string? MaDMH { get; set; }
+		public DateTime NgayMH { get; set; }
+		public string? MaNCC { get; set; }
+		public string? TenNCC { get; set; }
+		public string? TenSP { get; set; }
+		public int? SLM { get; set; }
+		public decimal? DGM { get; set; }
+	}
+
 }

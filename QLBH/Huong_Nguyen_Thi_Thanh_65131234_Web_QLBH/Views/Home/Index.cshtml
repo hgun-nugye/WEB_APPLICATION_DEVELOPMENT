@@ -9,12 +9,12 @@
 
     <div class="d-flex justify-content-center flex-wrap gap-4">
         <a asp-controller="NhaCC" asp-action="NhaCC_Admin"
-           class="btn btn-outline-primary btn-lg px-4 py-3 shadow rounded-pill">
+           class="btn btn-outline-danger btn-lg px-4 py-3 shadow rounded-pill">
             <i class="fa-solid fa-truck-field me-2"></i> Nhà Cung Cấp
         </a>
 
         <a asp-controller="KhachHang" asp-action="KhachHang_Admin"
-           class="btn btn-outline-danger btn-lg px-4 py-3 shadow rounded-pill">
+           class="btn btn-outline-dark btn-lg px-4 py-3 shadow rounded-pill">
             <i class="fa-solid fa-users me-2"></i> Khách Hàng
         </a>
 
@@ -44,8 +44,13 @@
         </a>
 
         <a asp-controller="DonMuaHang" asp-action="DonMuaHang_Admin"
-           class="btn btn-outline-danger btn-lg px-4 py-3 shadow rounded-pill">
+           class="btn btn-outline-primary btn-lg px-4 py-3 shadow rounded-pill">
             <i class="fa-solid fa-file-invoice me-2"></i> Đơn Mua Hàng
+        </a>
+
+        <a asp-controller="DonBanHang" asp-action="DonBanHang_Admin"
+           class="btn btn-outline-secondary btn-lg px-4 py-3 shadow rounded-pill">
+            <i class="fa-solid fa-file-invoice me-2"></i> Đơn Bán Hàng
         </a>
     </div>
 </div>

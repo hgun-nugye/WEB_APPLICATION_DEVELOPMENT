@@ -65,6 +65,7 @@ CREATE OR ALTER PROC sp_DonMuaHang_GetAll AS SELECT * FROM DonMuaHang;
 GO
 CREATE OR ALTER PROC sp_DonMuaHang_GetAll_Detail AS SELECT D.MaDMH, D.NgayMH, D.MaNCC, N.TenNCC AS TenNCC FROM DonMuaHang D join NhaCC N ON N.MaNCC=D.MaNCC;
 GO
+
 CREATE OR ALTER PROC sp_DonMuaHang_GetById @MaDMH CHAR(11) AS SELECT * FROM DonMuaHang WHERE MaDMH = @MaDMH;
 GO
 CREATE OR ALTER PROC sp_DonMuaHang_GetById_Detail @MaDMH CHAR(11) 
@@ -72,5 +73,15 @@ CREATE OR ALTER PROC sp_DonMuaHang_GetById_Detail @MaDMH CHAR(11)
 	FROM DonMuaHang D join NhaCC N ON N.MaNCC=D.MaNCC 
 	WHERE MaDMH = @MaDMH;
 GO
+
+CREATE OR ALTER PROC sp_DonMuaHang_GetById_CTMH 
+	@MaDMH CHAR(11)
+AS SELECT D.MaDMH, D.NgayMH, D.MaNCC, N.TenNCC AS TenNCC, C.SLM as SLM, C.DGM as DGM, S.TenSP FROM DonMuaHang D 
+		join NhaCC N ON N.MaNCC=D.MaNCC 
+		left join CTMH C on C.MaDMH=D.MaDMH
+		left join SanPham S on S.MaSP=C.MaSP
+		WHERE D.MaDMH=@MaDMH;
+GO
+
 CREATE OR ALTER PROC sp_DonMuaHang_Delete @MaDMH CHAR(11) AS DELETE FROM DonMuaHang WHERE MaDMH = @MaDMH;
 GO

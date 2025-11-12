@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -28,4 +27,16 @@ namespace Huong_Nguyen_Thi_Thanh_65131234_Web_QLBH.Models
 
 		public string? TenKH { get; set; }
 	}
+	[Keyless] // vì không có khóa chính riêng
+	public class DonBanHangDetail
+	{
+		public string? MaDBH { get; set; }
+		public DateTime NgayBH { get; set; }
+		public string? MaKH { get; set; }
+		public string? TenKH { get; set; }
+		public string? TenSP { get; set; }
+		public int? SLB { get; set; }
+		public decimal? DGB { get; set; }
+	}
+
 }
